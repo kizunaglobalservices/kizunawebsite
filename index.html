@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Launching Soon | Kizuna Global Services</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      body {
+        background-color: #0a192f;
+        color: white;
+        font-family: "Inter", sans-serif;
+      }
+      .glow {
+        box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+      }
+      @theme {
+        --color-clifford: #da373d;
+        --color-navy: #0a192f;
+        --color-gold: #c5a059;
+        --font-serif: "Playfair Display", serif;
+        --font-sans: "Inter", sans-serif;
+      }
+    </style>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
+  <body class="flex items-center justify-center min-h-screen p-6">
+    <div class="max-w-2xl w-full text-center space-y-12">
+      <!-- Logo Section -->
+      <div class="flex flex-col items-center">
+        <img
+          src="./kizuna-logo-temp.png"
+          alt="Kizuna Global Services Logo"
+          class="h-32 md:h-40 w-auto mb-6 transition-transform hover:scale-105 duration-500"
+        />
+        <div class="h-px w-24 bg-gold opacity-50"></div>
+      </div>
+
+      <!-- Text Content -->
+      <div class="space-y-4">
+        <h1 class="text-4xl md:text-6xl font-serif font-bold tracking-tight">
+          Our New Digital <br /><span class="text-gold italic"
+            >Home is Coming</span
+          >
+        </h1>
+        <p
+          class="text-slate-400 text-lg md:text-xl font-light max-w-lg mx-auto"
+        >
+          Kizuna Global Services is refining its global presence. We are
+          currently under maintenance to bring you a better experience.
+        </p>
+      </div>
+
+      <!-- Subscription Form -->
+      <div class="max-w-md mx-auto">
+        <!-- <p
+          class="text-[10px] uppercase tracking-[0.3em] text-gold font-bold mb-4"
+        >
+          Notify me when we launch
+        </p> -->
+        <!-- <form
+          class="flex flex-col sm:flex-row gap-2"
+          onsubmit="
+            event.preventDefault();
+            document.getElementById('success').classList.remove('hidden');
+            this.classList.add('hidden');
+          "
+        >
+          <input
+            type="email"
+            placeholder="Enter your email"
+            required
+            class="flex-1 bg-white/5 border border-white/10 px-6 py-4 outline-none focus:border-gold transition-colors text-sm"
+          />
+          <button
+            type="submit"
+            class="bg-gold text-navy px-8 py-4 font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-navy transition-all glow"
+          >
+            Submit
+          </button>
+        </form> -->
+        <div id="success" class="hidden text-gold py-4 font-bold text-sm">
+          Success! You've been added to our list.
+        </div>
+      </div>
+
+      <!-- Social Icons -->
+      <!-- <div class="pt-8 flex justify-center space-x-8 opacity-40">
+        <a href="#" class="hover:text-gold transition-colors"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a href="#" class="hover:text-gold transition-colors"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" class="hover:text-gold transition-colors"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </div> -->
+    </div>
+
+    <!-- Background Decoration -->
+    <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+      <div
+        class="absolute -top-24 -right-24 w-96 h-96 bg-gold opacity-[0.03] rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute -bottom-24 -left-24 w-96 h-96 bg-gold opacity-[0.03] rounded-full blur-3xl"
+      ></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+  </body>
+</html>
