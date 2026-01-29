@@ -1,0 +1,132 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import config from "../content/config/config.json";
+import IconLink from "./react/IconLink";
+---
+
+<header class="fixed w-full z-50 bg-navy text-white shadow-2xl">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo: Variant 4 - Calligraphic Fusion -->
+    <div
+      class="flex items-center space-x-4 cursor-pointer group"
+      onclick="showPage('home')"
+    >
+      <div class="relative flex items-center justify-center">
+        <!-- Subtle Kanji Watermark Background -->
+        <span class="kanji-bg text-4xl text-gold/20 absolute -left-1">絆</span>
+        <!-- Modern Stylized Kanji Icon -->
+        <div
+          class="w-10 h-10 border-l border-gold flex items-center justify-center ml-2 relative z-10"
+        >
+          <span
+            class="kanji-bg text-2xl text-gold group-hover:scale-110 transition-transform"
+            >絆</span
+          >
+        </div>
+      </div>
+      <div class="flex flex-col leading-none border-l border-white/10 pl-4">
+        <span class="text-xl font-serif font-bold tracking-widest uppercase"
+          >Kizuna</span
+        >
+        <span class="text-[10px] text-gold tracking-[0.3em] uppercase font-bold"
+          >Global Services</span
+        >
+      </div>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav
+      class="hidden md:flex space-x-8 text-[11px] font-bold tracking-widest uppercase"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="showPage('home')"
+        class="hover:text-gold transition-colors py-2">Home</a
+      >
+      <a
+        href="javascript:void(0)"
+        onclick="showPage('about')"
+        class="hover:text-gold transition-colors py-2">About</a
+      >
+      <a
+        href="javascript:void(0)"
+        onclick="showPage('services')"
+        class="hover:text-gold transition-colors py-2">Services</a
+      >
+      <a
+        href="javascript:void(0)"
+        onclick="showPage('portfolio')"
+        class="hover:text-gold transition-colors py-2">Portfolio</a
+      >
+      <a
+        href="javascript:void(0)"
+        onclick="showPage('contact')"
+        class="hover:text-gold transition-colors py-2 border border-gold px-4 hover:bg-gold hover:text-navy transition-all"
+        >Contact</a
+      >
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-gold text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden bg-navy border-t border-slate-800 p-6 flex flex-col space-y-4 md:hidden"
+  >
+    <a
+      href="javascript:void(0)"
+      onclick="showPage('home')"
+      class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+      >Home</a
+    >
+    <a
+      href="javascript:void(0)"
+      onclick="showPage('about')"
+      class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+      >About</a
+    >
+    <a
+      href="javascript:void(0)"
+      onclick="showPage('services')"
+      class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+      >Services</a
+    >
+    <a
+      href="javascript:void(0)"
+      onclick="showPage('portfolio')"
+      class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+      >Portfolio</a
+    >
+    <a
+      href="javascript:void(0)"
+      onclick="showPage('contact')"
+      class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+      >Contact</a
+    >
+  </div>
+</header>
+<header class="hidden">
+  <nav>
+    <h2><a href="/">{config.seo.title}</a></h2>
+    <div class="internal-links">
+      {
+        config.nav.map((nav) => (
+          <HeaderLink href={nav.link}>{nav.title}</HeaderLink>
+        ))
+      }
+    </div>
+    <div class="social-links">
+      {
+        config?.contactLinks?.map((link) => {
+          return <IconLink {...link} />;
+        })
+      }
+    </div>
+  </nav>
+</header>
