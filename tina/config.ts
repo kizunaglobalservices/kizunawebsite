@@ -6,7 +6,10 @@ import { HomepageCollection } from "./collections/homepage";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
-  process.env.GITHUB_BRANCH;
+  process.env.GITHUB_BRANCH ||
+  process.env.VERCEL_GIT_COMMIT_REF ||
+  process.env.HEAD ||
+  "main";
 
 export default defineConfig({
   branch,
@@ -22,7 +25,7 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "uploads",
+      mediaRoot: "",
       publicFolder: "public",
     },
   },
