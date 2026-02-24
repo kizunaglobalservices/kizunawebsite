@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Kizuna Global Services</title>
+    <meta
+      name="description"
+      content="Explore our industry-leading suite of marketing and publishing services designed to help authors connect with readers and achieve global success."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/public/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+    <link rel="shortcut icon" href="/public/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/public/site.webmanifest" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Services | Kizuna Global Services" />
+    <meta
+      property="og:description"
+      content="Industry-leading marketing and publishing services. From Bookstore Distribution to Media Campaigns, we help your story reach the world."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kizunaglobals.com/services.html" />
+    <meta property="og:image" content="./kizuna-logo-temp.png" />
+
+    <!-- Tailwind CSS with Custom Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: {
+              center: true,
+              screens: {
+                sm: "640px",
+                md: "768px",
+                lg: "1024px",
+                xl: "1440px",
+              },
+            },
+            colors: {
+              navy: "#0A192F",
+              gold: {
+                DEFAULT: "#C5A059",
+                light: "#E2C285",
+                dark: "#A38141",
+              },
+              cream: "#FFF9E5",
+            },
+            fontFamily: {
+              serif: ["Playfair Display", "serif"],
+              sans: ["Inter", "sans-serif"],
+              jp: ['"Noto Serif JP"', "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=Noto+Serif+JP:wght@200;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style type="text/css">
+      body {
+        background-color: #ffffff;
+        overflow-x: hidden;
+      }
+
+      .cta-pattern {
+        background-color: #0a192f;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c5a059' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      /* Reveal Animation */
+      .reveal-from-left {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+
+      .reveal-from-left.revealed {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .service-card {
+        background-color: #fff9e5;
+        border-bottom: 2px solid #e2c285;
+      }
+
+      .section-header-bar {
+        background-color: #0a192f;
+        color: white;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-header-bar .square {
+        width: 1rem;
+        height: 1rem;
+        background-color: white;
+        margin-right: 0.75rem;
+      }
+    </style>
+  </head>
+  <body class="text-navy antialiased">
+    <!-- Header / Navigation -->
+    <header class="fixed w-full z-50 bg-navy text-white shadow-2xl">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <a
+          href="index.html"
+          class="flex items-center space-x-4 cursor-pointer group"
+        >
+          <div class="relative flex items-center justify-center">
+            <img src="./logo-k.png" alt="" width="50" />
+          </div>
+          <div class="flex flex-col leading-none border-l border-white/10 pl-4">
+            <span class="text-xl font-serif font-bold tracking-widest uppercase"
+              >Kizuna</span
+            >
+            <span
+              class="text-[10px] text-gold tracking-[0.3em] uppercase font-bold"
+              >Global Services</span
+            >
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav
+          class="hidden md:flex space-x-8 text-[11px] font-bold tracking-widest uppercase"
+        >
+          <a href="index.html" class="hover:text-gold transition-colors py-2"
+            >Home</a
+          >
+          <a href="about.html" class="hover:text-gold transition-colors py-2"
+            >About</a
+          >
+          <a href="services.html" class="text-gold transition-colors py-2"
+            >Services</a
+          >
+          <a
+            href="portfolio.html"
+            class="hover:text-gold transition-colors py-2"
+            >Portfolio</a
+          >
+          <a
+            href="contact.html"
+            class="hover:text-gold transition-colors py-2 border border-gold px-4 hover:bg-gold hover:text-navy transition-all"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gold text-2xl focus:outline-none">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden bg-navy border-t border-slate-800 p-6 flex flex-col space-y-4 md:hidden"
+      >
+        <a
+          href="index.html"
+          class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+          >About</a
+        >
+        <a
+          href="services.html"
+          class="text-gold uppercase text-xs font-bold tracking-widest"
+          >Services</a
+        >
+        <a
+          href="#!"
+          class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+          >Portfolio</a
+        >
+        <a
+          href="#!"
+          class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+          >Contact</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- Page: SERVICES -->
+      <section id="services" class="pt-24 pb-24">
+        <!-- Hero Section from Image -->
+        <div class="bg-navy pt-20 pb-16 text-center text-white relative">
+          <div class="container mx-auto px-6">
+            <h1 class="text-6xl font-serif font-bold tracking-[0.2em] mb-2">
+              KIZUNA
+            </h1>
+            <p
+              class="text-gold text-sm tracking-[0.4em] uppercase font-bold mb-6"
+            >
+              Marketing Services
+            </p>
+            <div class="h-[1px] bg-gold/50 w-full mb-8"></div>
+            <h2 class="text-xl md:text-2xl font-serif text-gold-light italic">
+              Amplify Your Book. Reach Your Readers. Build Your Legacy.
+            </h2>
+          </div>
+        </div>
+
+        <div class="container mx-auto px-6 py-12 text-center">
+          <p
+            class="text-navy text-lg max-w-5xl mx-auto leading-relaxed font-medium"
+          >
+            At Kizuna, we believe every story deserves to be heard. That's why
+            we've built an industry-leading suite of marketing services to help
+            self-published authors connect with their readers, grow their brand,
+            and achieve lasting success — wherever their ambitions lead.
+          </p>
+          <div class="h-[2px] bg-gold/30 mt-12 max-w-5xl mx-auto"></div>
+        </div>
+
+        <div class="container mx-auto px-6 space-y-20">
+          <!-- 1. Bookstore & Distribution -->
+          <div class="reveal-from-left">
+            <h4
+              class="text-2xl font-serif font-bold text-navy mb-8 border-l-4 border-gold pl-4 text-left"
+            >
+              Bookstore & Distribution Programs
+            </h4>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div
+                class="bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 border-t-2 border-transparent hover:border-gold group"
+              >
+                <div
+                  class="w-10 h-10 bg-slate-50 flex items-center justify-center mb-4 group-hover:bg-gold transition-colors"
+                >
+                  <i
+                    class="fas fa-book-open text-gold group-hover:text-white transition-colors"
+                  ></i>
+                </div>
+                <h5
+                  class="text-sm font-bold text-navy uppercase tracking-wider mb-2"
+                >
+                  Bookstore Returnability — Paperback
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Make your paperback eligible for return by major bookstores,
+                  dramatically increasing shelf placement opportunities.
+                  Available in 12, 24, and 36-month terms.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 border-t-2 border-transparent hover:border-gold group"
+              >
+                <div
+                  class="w-10 h-10 bg-slate-50 flex items-center justify-center mb-4 group-hover:bg-gold transition-colors"
+                >
+                  <i
+                    class="fas fa-book text-gold group-hover:text-white transition-colors"
+                  ></i>
+                </div>
+                <h5
+                  class="text-sm font-bold text-navy uppercase tracking-wider mb-2"
+                >
+                  Bookstore Returnability — Hardback
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Extend your hardback's reach into physical retail by enrolling
+                  in our returnability program. Bookstores are far more likely
+                  to stock titles with return policies.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 border-t-2 border-transparent hover:border-gold group"
+              >
+                <div
+                  class="w-10 h-10 bg-slate-50 flex items-center justify-center mb-4 group-hover:bg-gold transition-colors"
+                >
+                  <i
+                    class="fas fa-store text-gold group-hover:text-white transition-colors"
+                  ></i>
+                </div>
+                <h5
+                  class="text-sm font-bold text-navy uppercase tracking-wider mb-2"
+                >
+                  National Bookstore Visibility
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Supercharge your title's presence across national bookstore
+                  chains with premium placement strategies, retailer outreach,
+                  and enhanced discoverability tools.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 border-t-2 border-transparent hover:border-gold group"
+              >
+                <div
+                  class="w-10 h-10 bg-slate-50 flex items-center justify-center mb-4 group-hover:bg-gold transition-colors"
+                >
+                  <i
+                    class="fas fa-percent text-gold group-hover:text-white transition-colors"
+                  ></i>
+                </div>
+                <h5
+                  class="text-sm font-bold text-navy uppercase tracking-wider mb-2"
+                >
+                  100% Royalty Program
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Keep every dollar your book earns. We restructure your
+                  publishing arrangement so you receive the full royalty on
+                  every sale — your work should work for you.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Reviews & Credibility -->
+          <div class="reveal-from-left">
+            <h4
+              class="text-2xl font-serif font-bold text-navy mb-8 border-l-4 border-gold pl-4 text-left"
+            >
+              Reviews & Credibility
+            </h4>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div
+                class="bg-white p-6 shadow-sm hover:shadow-md transition-all border-l-2 border-transparent hover:border-gold group"
+              >
+                <h5
+                  class="text-sm font-bold text-navy uppercase tracking-wider mb-2"
+                >
+                  Kirkus Indie Review
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed mb-4">
+                  Gain the stamp of credibility that readers, librarians, and
+                  media professionals trust and rely on from one of the most
+                  respected names in publishing.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm hover:shadow-md transition-all border-l-2 border-transparent hover:border-gold group"
+              >
+                <h5
+                  class="text-sm font-bold text-navy uppercase tracking-wider mb-2"
+                >
+                  Pacific Book Review
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed mb-4">
+                  Receive a professional, in-depth critique from a recognized
+                  authority in independent publishing that reaches thousands of
+                  avid readers and professionals.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm hover:shadow-md transition-all border-l-2 border-transparent hover:border-gold group"
+              >
+                <h5
+                  class="text-sm font-bold text-navy uppercase tracking-wider mb-2"
+                >
+                  US Review of Books — Premium
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed mb-4">
+                  Gain a prestigious feature in the US Review of Books, a highly
+                  regarded platform known for discovering outstanding
+                  independent titles nationwide.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm hover:shadow-md transition-all border-l-2 border-transparent hover:border-gold group"
+              >
+                <h5
+                  class="text-sm font-bold text-navy uppercase tracking-wider mb-2"
+                >
+                  Hollywood Book Review — Ultimate
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed mb-4">
+                  Capture the attention of entertainment professionals with this
+                  ultimate-tier service designed to attract interest from
+                  producers and agents scouted for stories.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Publicity & Media -->
+          <div class="reveal-from-left">
+            <h4
+              class="text-2xl font-serif font-bold text-navy mb-8 border-l-4 border-gold pl-4 text-left"
+            >
+              Publicity & Media Campaigns
+            </h4>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div
+                class="bg-white p-8 shadow-sm hover:shadow-xl transition-all border-t-2 border-transparent hover:border-gold group"
+              >
+                <h5 class="text-lg font-serif font-bold text-navy mb-3">
+                  Paramount Elite Publicity
+                </h5>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                  Our most prestigious publicity package, connecting your book
+                  with top-tier media outlets, journalists, and influencers for
+                  a fully managed, high-impact campaign.
+                </p>
+              </div>
+              <div
+                class="bg-white p-8 shadow-sm hover:shadow-xl transition-all border-t-2 border-transparent hover:border-gold group"
+              >
+                <h5 class="text-lg font-serif font-bold text-navy mb-3">
+                  Superior Express Programs
+                </h5>
+                <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                  Fully bespoke publicity campaigns tailored to your genre and
+                  target audience, including physical book distribution to media
+                  contacts and reviewers.
+                </p>
+                <p class="text-slate-400 text-xs italic">
+                  Available with +100-Book Distribution options.
+                </p>
+              </div>
+              <div
+                class="bg-white p-8 shadow-sm hover:shadow-xl transition-all border-t-2 border-transparent hover:border-gold group"
+              >
+                <h5 class="text-lg font-serif font-bold text-navy mb-3">
+                  Professional Newslines
+                </h5>
+                <div class="space-y-4">
+                  <p class="text-slate-500 text-xs leading-relaxed">
+                    <strong>National Media Newsline:</strong> Distribute a
+                    professional author feature across a national media
+                    newswire.
+                  </p>
+                  <p class="text-slate-500 text-xs leading-relaxed">
+                    <strong>Regional & Statewide:</strong> Target readers in
+                    specific regions or states with focused newsline
+                    distributions to local outlets.
+                  </p>
+                  <p class="text-slate-500 text-xs leading-relaxed">
+                    <strong>Metro & NY State:</strong> Break into the world's
+                    most competitive media markets with premium placement.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Press & Interviews -->
+          <div class="reveal-from-left">
+            <h4
+              class="text-2xl font-serif font-bold text-navy mb-8 border-l-4 border-gold pl-4 text-left"
+            >
+              Press Releases & Interviews
+            </h4>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-slate-100 p-6 border-b-4 border-navy group">
+                <h5 class="font-bold text-navy text-xs uppercase mb-3">
+                  Press Release Campaign
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Our specialists craft and distribute professional press
+                  releases to targeted media lists, generating the buzz your
+                  launch deserves.
+                </p>
+              </div>
+              <div class="bg-slate-100 p-6 border-b-4 border-navy group">
+                <h5 class="font-bold text-navy text-xs uppercase mb-3">
+                  Author Interview Production
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  A professionally produced author interview. We handle
+                  production, scripting, and distribution so you can share your
+                  story in a compelling format.
+                </p>
+              </div>
+              <div class="bg-slate-100 p-6 border-b-4 border-navy group">
+                <h5 class="font-bold text-navy text-xs uppercase mb-3">
+                  Featured Author Spotlight
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Be showcased as a featured author across our network of
+                  partner platforms and media channels, amplifying your
+                  visibility as a go-to voice.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Broadcast & Video -->
+          <div class="reveal-from-left">
+            <h4
+              class="text-2xl font-serif font-bold text-navy mb-8 border-l-4 border-gold pl-4 text-left"
+            >
+              Broadcast, Radio & Video Production
+            </h4>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div
+                class="bg-white p-6 shadow-sm border-b-2 border-slate-100 hover:border-gold transition-all"
+              >
+                <i class="fas fa-microphone text-gold mb-4 text-xl"></i>
+                <h5 class="font-bold text-navy text-[10px] uppercase mb-2">
+                  Radio Spotlights
+                </h5>
+                <p class="text-slate-500 text-[11px] leading-relaxed">
+                  Features on CBS Radio, 'This Week in America', and 'America
+                  Tonight' with dedicated national audiences.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm border-b-2 border-slate-100 hover:border-gold transition-all"
+              >
+                <i class="fas fa-video text-gold mb-4 text-xl"></i>
+                <h5 class="font-bold text-navy text-[10px] uppercase mb-2">
+                  Cinematic Book Trailers
+                </h5>
+                <p class="text-slate-500 text-[11px] leading-relaxed">
+                  From Premier and Noblesse Signature to Elite Impact
+                  Hollywood-level quality video productions.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm border-b-2 border-slate-100 hover:border-gold transition-all"
+              >
+                <i class="fas fa-bullhorn text-gold mb-4 text-xl"></i>
+                <h5 class="font-bold text-navy text-[10px] uppercase mb-2">
+                  YouTube Promo Boosts
+                </h5>
+                <p class="text-slate-500 text-[11px] leading-relaxed">
+                  Launch campaigns ranging from 5-day Starter to 12-day Elite
+                  experiences, delivering maximum impressions and reach.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm border-b-2 border-slate-100 hover:border-gold transition-all"
+              >
+                <i class="fas fa-camera text-gold mb-4 text-xl"></i>
+                <h5 class="font-bold text-navy text-[10px] uppercase mb-2">
+                  Creative Enhancements
+                </h5>
+                <p class="text-slate-500 text-[11px] leading-relaxed">
+                  Enhanced Author Photo Packages, Professional Voiceover
+                  Production, and Post-Publication Video Enhancements.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Digital & Search Marketing -->
+          <div class="reveal-from-left">
+            <h4
+              class="text-2xl font-serif font-bold text-navy mb-8 border-l-4 border-gold pl-4 text-left"
+            >
+              Digital & Search Marketing
+            </h4>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="bg-white p-8 shadow-sm border-r-4 border-gold group">
+                <h5 class="text-lg font-serif font-bold text-navy mb-4">
+                  Search Engine Optimization
+                </h5>
+                <ul class="space-y-3 text-xs text-slate-500">
+                  <li>
+                    <i class="fas fa-check text-gold mr-2"></i>
+                    <strong>Bronze Visibility Plan:</strong> Optimize web
+                    presence for search.
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-gold mr-2"></i>
+                    <strong>Silver Growth Plan:</strong> Authority building and
+                    improved rankings.
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-gold mr-2"></i>
+                    <strong>Gold Authority Plan:</strong> Full-spectrum
+                    optimization for brand dominance.
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-white p-8 shadow-sm border-r-4 border-gold group">
+                <h5 class="text-lg font-serif font-bold text-navy mb-4">
+                  Paid Advertising & Campaigns
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed mb-4">
+                  Google Marketing Power Campaigns (90 Days), Retail Preview
+                  Optimization for Amazon, B&N, and Google Books, and local
+                  discovery suites.
+                </p>
+                <div class="flex space-x-3 text-slate-300">
+                  <i class="fab fa-google text-lg"></i>
+                  <i class="fab fa-amazon text-lg"></i>
+                </div>
+              </div>
+              <div class="bg-white p-8 shadow-sm border-r-4 border-gold group">
+                <h5 class="text-lg font-serif font-bold text-navy mb-4">
+                  Launch & Discovery
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Online Focus Discovery Package and Rising Author Launch
+                  Package — everything a debut or growing author needs in one
+                  bundle to create a strong presence.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Amazon & Social Marketing -->
+          <div class="reveal-from-left">
+            <h4
+              class="text-2xl font-serif font-bold text-navy mb-8 border-l-4 border-gold pl-4 text-left"
+            >
+              Platform-Specific Marketing
+            </h4>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="bg-slate-50 p-8 rounded-lg border border-slate-200">
+                <h5
+                  class="text-xl font-serif font-bold text-navy mb-4 flex items-center"
+                >
+                  <i class="fab fa-amazon text-gold mr-3"></i> Amazon Bookseller
+                  Spotlights
+                </h5>
+                <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                  Boost visibility directly on Amazon with targeted campaigns
+                  featuring enhanced placement and promotional ads.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                  <span
+                    class="bg-white px-4 py-2 text-[10px] font-bold text-gold border border-gold/20"
+                    >30-DAY BOOST</span
+                  >
+                  <span
+                    class="bg-white px-4 py-2 text-[10px] font-bold text-gold border border-gold/20"
+                    >60-DAY MOMENTUM</span
+                  >
+                  <span
+                    class="bg-white px-4 py-2 text-[10px] font-bold text-gold border border-gold/20"
+                    >90-DAY COMPREHENSIVE</span
+                  >
+                </div>
+              </div>
+              <div class="bg-slate-50 p-8 rounded-lg border border-slate-200">
+                <h5
+                  class="text-xl font-serif font-bold text-navy mb-4 flex items-center"
+                >
+                  <i class="fas fa-share-nodes text-gold mr-3"></i> Social Media
+                  Campaign Boosts
+                </h5>
+                <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                  Launch your social media presence across major platforms with
+                  compelling content and strategic advertising work.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                  <span
+                    class="bg-white px-4 py-2 text-[10px] font-bold text-gold border border-gold/20"
+                    >30-DAY LAUNCH</span
+                  >
+                  <span
+                    class="bg-white px-4 py-2 text-[10px] font-bold text-gold border border-gold/20"
+                    >60-DAY SUSTAINED</span
+                  >
+                  <span
+                    class="bg-white px-4 py-2 text-[10px] font-bold text-gold border border-gold/20"
+                    >90-DAY EXTENSIVE</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Blog Tours -->
+          <div class="reveal-from-left">
+            <h4
+              class="text-2xl font-serif font-bold text-navy mb-8 border-l-4 border-gold pl-4 text-left"
+            >
+              Blog Tours & Exposure
+            </h4>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div
+                class="bg-white p-6 shadow-sm border border-slate-100 hover:shadow-md transition-all"
+              >
+                <h5 class="text-[10px] font-bold text-navy uppercase mb-2">
+                  Blog Tour Express
+                </h5>
+                <p class="text-slate-500 text-[10px] leading-relaxed">
+                  30-day curated tour featuring established book bloggers in
+                  your genre.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm border border-slate-100 hover:shadow-md transition-all"
+              >
+                <h5 class="text-[10px] font-bold text-navy uppercase mb-2">
+                  Blog Tour Momentum
+                </h5>
+                <p class="text-slate-500 text-[10px] leading-relaxed">
+                  60-day tour designed to keep your book in the conversation
+                  long after launch.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm border border-slate-100 hover:shadow-md transition-all"
+              >
+                <h5 class="text-[10px] font-bold text-navy uppercase mb-2">
+                  Blog Tour Authority
+                </h5>
+                <p class="text-slate-500 text-[10px] leading-relaxed">
+                  120-day gold standard tour for deep, lasting reader
+                  engagement.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm border border-slate-100 hover:shadow-md transition-all"
+              >
+                <h5 class="text-[10px] font-bold text-navy uppercase mb-2">
+                  Extensive Blog Exposure
+                </h5>
+                <p class="text-slate-500 text-[10px] leading-relaxed">
+                  Placements across dozens of platforms (30, 60, 90, and 120-day
+                  plans).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Web & Technical -->
+          <div class="reveal-from-left">
+            <h4
+              class="text-2xl font-serif font-bold text-navy mb-8 border-l-4 border-gold pl-4 text-left"
+            >
+              Web Design & technical services
+            </h4>
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="bg-white p-8 shadow-sm group border-t-4 border-navy">
+                <h5 class="text-lg font-serif font-bold text-navy mb-4">
+                  Website Suites
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Advanced Website Design Suites and eCommerce Website
+                  Development Pro packages tailored to your author brand.
+                </p>
+              </div>
+              <div class="bg-white p-8 shadow-sm group border-t-4 border-navy">
+                <h5 class="text-lg font-serif font-bold text-navy mb-4">
+                  Security & Maintenance
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  Secure eCommerce Builds with SSL, Advanced Design with
+                  SiteLock Security, and Annual Website Renewal services.
+                </p>
+              </div>
+              <div class="bg-white p-8 shadow-sm group border-t-4 border-navy">
+                <h5 class="text-lg font-serif font-bold text-navy mb-4">
+                  Complimentary & Migration
+                </h5>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                  eCommerce Privacy & Compliance Upgrades and fully managed
+                  Publisher Migration Services to and from ARP.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Hollywood & Screen Services -->
+          <div class="reveal-from-left">
+            <h4
+              class="text-2xl font-serif font-bold text-navy mb-8 border-l-4 border-gold pl-4 text-left"
+            >
+              Hollywood & Screen
+            </h4>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div
+                class="bg-white p-6 shadow-sm border-t-2 border-slate-100 hover:border-gold transition-all"
+              >
+                <h5 class="font-bold text-navy text-[10px] uppercase mb-2">
+                  Book-to-Screen Program
+                </h5>
+                <p class="text-slate-500 text-[10px] leading-relaxed">
+                  Places your manuscript in front of agents, producers, and
+                  developers seeking fresh screen material.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm border-t-2 border-slate-100 hover:border-gold transition-all"
+              >
+                <h5 class="font-bold text-navy text-[10px] uppercase mb-2">
+                  Cinematic Script Analysis
+                </h5>
+                <p class="text-slate-500 text-[10px] leading-relaxed">
+                  Expert evaluation of your story's visual potential, character
+                  arcs, and adaptability for film or TV.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm border-t-2 border-slate-100 hover:border-gold transition-all"
+              >
+                <h5 class="font-bold text-navy text-[10px] uppercase mb-2">
+                  Film Treatment Development
+                </h5>
+                <p class="text-slate-500 text-[10px] leading-relaxed">
+                  Bridge the gap between book and screenplay with professionally
+                  developed industry-standard treatments.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm border-t-2 border-slate-100 hover:border-gold transition-all"
+              >
+                <h5 class="font-bold text-navy text-[10px] uppercase mb-2">
+                  Screenplay Writing
+                </h5>
+                <p class="text-slate-500 text-[10px] leading-relaxed">
+                  Professional screenwriters transform your book into a polished
+                  screenplay ready for Hollywood pitching.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Literary Agent Services -->
+          <div class="reveal-from-left">
+            <h4
+              class="text-2xl font-serif font-bold text-navy mb-8 border-l-4 border-gold pl-4 text-left"
+            >
+              Literary Agent Services
+            </h4>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div
+                class="bg-white p-6 shadow-sm border-t-2 border-slate-100 hover:border-gold transition-all"
+              >
+                <h5 class="font-bold text-navy text-[10px] uppercase mb-2">
+                  Query Letter Creation
+                </h5>
+                <p class="text-slate-500 text-[10px] leading-relaxed">
+                  Expert writers craft compelling, personalized query letters to
+                  present your book in the best light.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm border-t-2 border-slate-100 hover:border-gold transition-all"
+              >
+                <h5 class="font-bold text-navy text-[10px] uppercase mb-2">
+                  Query Letter Review
+                </h5>
+                <p class="text-slate-500 text-[10px] leading-relaxed">
+                  Professional sharpening, refining, and elevation of your
+                  existing query letter for maximum impact.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm border-t-2 border-slate-100 hover:border-gold transition-all"
+              >
+                <h5 class="font-bold text-navy text-[10px] uppercase mb-2">
+                  500-Word Synopsis
+                </h5>
+                <p class="text-slate-500 text-[10px] leading-relaxed">
+                  A tight, compelling narrative synopsis that serves as your
+                  book's audition piece for agents and publishers.
+                </p>
+              </div>
+              <div
+                class="bg-white p-6 shadow-sm border-t-2 border-slate-100 hover:border-gold transition-all"
+              >
+                <h5 class="font-bold text-navy text-[10px] uppercase mb-2">
+                  Agent Contact Lists
+                </h5>
+                <p class="text-slate-500 text-[10px] leading-relaxed">
+                  Curated lists of targeted, vetted literary agents matched
+                  specifically to your book's genre.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. Printed Materials & Events -->
+          <div class="reveal-from-left">
+            <h4
+              class="text-2xl font-serif font-bold text-navy mb-8 border-l-4 border-gold pl-4 text-left"
+            >
+              Printed Materials & Events
+            </h4>
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="bg-slate-100 p-8 group">
+                <h5 class="text-lg font-serif font-bold text-navy mb-4">
+                  Printed Marketing Materials
+                </h5>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Beautifully designed print collateral — bookmarks, postcards,
+                  sell sheets, and more — featuring your book's unique branding
+                  for signings and events.
+                </p>
+              </div>
+              <div class="bg-slate-100 p-8 group">
+                <h5 class="text-lg font-serif font-bold text-navy mb-4">
+                  Events & Exhibition Program
+                </h5>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Display your work at physical and digital literary events,
+                  book fairs, and exhibitions around the world to connect with
+                  readers and professionals.
+                </p>
+              </div>
+              <div class="bg-slate-100 p-8 group">
+                <h5 class="text-lg font-serif font-bold text-navy mb-4">
+                  Print Advertising Placements
+                </h5>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Advertise in distinguished, well-established print
+                  publications that reach loyal, engaged readers and provide
+                  instant authority to your title.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 13. Audiobook Production -->
+          <div class="reveal-from-left">
+            <h4
+              class="text-2xl font-serif font-bold text-navy mb-8 border-l-4 border-gold pl-4 text-left"
+            >
+              Audiobook Production
+            </h4>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="bg-white p-8 shadow-sm border-l-4 border-gold">
+                <h5 class="text-xl font-serif font-bold text-navy mb-3">
+                  Audiobook Production — Standard
+                </h5>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                  High-quality, professionally narrated version of your book
+                  ready for distribution on all major platforms. Priced per hour
+                  of finished audio.
+                </p>
+              </div>
+              <div class="bg-white p-8 shadow-sm border-l-4 border-gold">
+                <h5 class="text-xl font-serif font-bold text-navy mb-3">
+                  Audiobook Production — Extended
+                </h5>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                  Dedicated production for longer works, ensuring every chapter
+                  receives premium listening care from start to finish.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="container mx-auto px-6 mt-24">
+          <div
+            class="bg-navy p-12 text-center text-white relative overflow-hidden"
+          >
+            <div class="absolute inset-0 opacity-10 cta-pattern"></div>
+            <div class="relative z-10">
+              <h3 class="text-3xl font-serif font-bold mb-4">
+                Ready to elevate your book to the next level?
+              </h3>
+              <p class="text-slate-400 mb-8 max-w-2xl mx-auto">
+                Speak with a Kizuna Marketing Consultant today and discover the
+                perfect strategy for your story.
+              </p>
+              <div
+                class="flex flex-col md:flex-row justify-center items-center gap-4"
+              >
+                <button
+                  class="bg-gold text-navy px-12 py-4 font-bold uppercase tracking-widest text-xs hover:bg-gold-light transition-all shadow-xl w-full md:w-auto"
+                >
+                  Schedule Your Strategy Call
+                </button>
+                <a
+                  href="./Kizuna_Marketing_Services.pdf"
+                  target="_blank"
+                  class="border border-gold text-gold px-12 py-4 font-bold uppercase tracking-widest text-xs hover:bg-gold hover:text-navy transition-all w-full md:w-auto"
+                >
+                  Download PDF brochure
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-20">
+      <div
+        class="container mx-auto px-6 grid md:grid-cols-3 gap-16 border-b border-slate-800 pb-16"
+      >
+        <div>
+          <div class="flex items-center space-x-3 mb-6 cursor-pointer">
+            <span class="text-lg font-serif font-bold tracking-widest uppercase"
+              >Kizuna Global</span
+            >
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-xs">
+            Elevating creators through strategic publishing and global marketing
+            solutions since 2026.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-8">
+          <div>
+            <h5
+              class="text-gold font-bold uppercase text-[10px] tracking-[0.2em] mb-6"
+            >
+              Explore
+            </h5>
+            <ul class="space-y-3 text-xs text-slate-400">
+              <li>
+                <a href="about.html" class="hover:text-white transition-colors"
+                  >Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="hover:text-white transition-colors"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="portfolio.html"
+                  class="hover:text-white transition-colors"
+                  >Portfolio</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5
+              class="text-gold font-bold uppercase text-[10px] tracking-[0.2em] mb-6"
+            >
+              Contact
+            </h5>
+            <ul class="space-y-3 text-xs text-slate-400">
+              <li>30 N Gould St STE R Sheridan, WY 82801, USA</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h5
+            class="text-gold font-bold uppercase text-[10px] tracking-[0.2em] mb-6"
+          >
+            The Global Report
+          </h5>
+          <p class="text-slate-400 text-[10px] mb-4">
+            Insights on the future of international publishing.
+          </p>
+          <div class="flex">
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="bg-slate-800 border-none px-4 py-3 text-xs w-full outline-none focus:ring-1 focus:ring-gold text-white"
+            />
+            <button class="bg-gold px-6 text-navy hover:bg-gold-light">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto px-6 pt-10 text-center">
+        <p
+          class="text-[10px] text-slate-500 font-bold tracking-[0.2em] uppercase"
+        >
+          &copy; 2026 Kizuna Global Services. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("menu-btn").addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+
+      window.onload = () => {
+        // Initialize Reveal Animation
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("revealed");
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+
+        document
+          .querySelectorAll(".reveal-from-left")
+          .forEach((el) => revealObserver.observe(el));
+      };
+    </script>
+  </body>
+</html>
