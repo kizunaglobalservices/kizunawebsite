@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publishing Packages | Kizuna Global Services</title>
+    <meta
+      name="description"
+      content="Comprehensive publishing packages for authors. From Black & White to Full Color and Children's Books, we provide end-to-end production and global distribution."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/public/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+    <link rel="shortcut icon" href="/public/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/public/site.webmanifest" />
+
+    <!-- Tailwind CSS with Custom Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: {
+              center: true,
+              screens: {
+                sm: "640px",
+                md: "768px",
+                lg: "1024px",
+                xl: "1440px",
+              },
+            },
+            colors: {
+              navy: "#0A192F",
+              gold: {
+                DEFAULT: "#C5A059",
+                light: "#E2C285",
+                dark: "#A38141",
+              },
+            },
+            fontFamily: {
+              serif: ["Playfair Display", "serif"],
+              sans: ["Inter", "sans-serif"],
+              jp: ['"Noto Serif JP"', "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=Noto+Serif+JP:wght@200;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style type="text/css">
+      body {
+        background-color: #fcfcfc;
+        overflow-x: hidden;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(
+          rgba(10, 25, 47, 0.85),
+          rgba(10, 25, 47, 0.95)
+        );
+      }
+
+      .kanji-bg {
+        font-family: "Noto Serif JP", serif;
+        font-weight: 200;
+      }
+
+      /* Reveal Animation */
+      .reveal-from-left {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+
+      .reveal-from-left.revealed {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .package-card {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .package-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="text-navy antialiased">
+    <!-- Header / Navigation -->
+    <header class="fixed w-full z-50 bg-navy text-white shadow-2xl">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <a
+          href="index.html"
+          class="flex items-center space-x-4 cursor-pointer group"
+        >
+          <div class="relative flex items-center justify-center">
+            <img src="./logo-k.png" alt="" width="50" />
+          </div>
+          <div class="flex flex-col leading-none border-l border-white/10 pl-4">
+            <span class="text-xl font-serif font-bold tracking-widest uppercase"
+              >Kizuna</span
+            >
+            <span
+              class="text-[12px] text-gold tracking-[0.3em] uppercase font-bold"
+              >Global Services</span
+            >
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav
+          class="hidden md:flex space-x-8 text-[12px] font-bold tracking-widest uppercase items-center"
+        >
+          <a href="index.html" class="hover:text-gold transition-colors py-2"
+            >Home</a
+          >
+          <a href="about.html" class="hover:text-gold transition-colors py-2"
+            >About</a
+          >
+
+          <!-- Services Dropdown -->
+          <div class="relative group">
+            <button
+              class="flex items-center text-gold transition-colors py-2 uppercase tracking-widest focus:outline-none"
+            >
+              Services <i class="fas fa-chevron-down ml-2 text-[10px]"></i>
+            </button>
+            <div
+              class="absolute left-0 mt-0 w-48 bg-navy border border-gold/20 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+            >
+              <a
+                href="services.html"
+                class="block px-4 py-3 hover:bg-gold hover:text-navy transition-colors"
+                >Marketing</a
+              >
+              <a
+                href="publishing.html"
+                class="block px-4 py-3 hover:bg-gold hover:text-navy transition-colors bg-gold/10 text-gold"
+                >Publishing</a
+              >
+            </div>
+          </div>
+
+          <a
+            href="portfolio.html"
+            class="hover:text-gold transition-colors py-2"
+            >Portfolio</a
+          >
+          <a
+            href="contact.html"
+            class="hover:text-gold transition-colors py-2 border border-gold px-4 hover:bg-gold hover:text-navy transition-all"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gold text-2xl focus:outline-none">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden bg-navy border-t border-slate-800 p-6 flex flex-col space-y-4 md:hidden"
+      >
+        <a
+          href="index.html"
+          class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+          >About</a
+        >
+        <a
+          href="services.html"
+          class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+          >Marketing Services</a
+        >
+        <a
+          href="publishing.html"
+          class="text-gold uppercase text-xs font-bold tracking-widest"
+          >Publishing Services</a
+        >
+        <a
+          href="portfolio.html"
+          class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+          >Portfolio</a
+        >
+        <a
+          href="contact.html"
+          class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+          >Contact</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- Page: PUBLISHING -->
+      <section id="publishing" class="pt-20 pb-24">
+        <!-- Hero Section -->
+        <div
+          class="relative h-[40vh] flex items-center bg-[url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80')] bg-cover bg-center"
+        >
+          <div class="absolute inset-0 hero-overlay"></div>
+          <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2
+              class="text-gold font-bold tracking-[0.4em] uppercase mb-4 text-xs reveal-from-left"
+            >
+              Professional Production
+            </h2>
+            <h1
+              class="text-4xl md:text-6xl font-serif font-bold text-white reveal-from-left"
+              style="transition-delay: 0.1s"
+            >
+              Publishing <span class="italic text-gold">Packages</span>
+            </h1>
+          </div>
+        </div>
+
+        <div class="container mx-auto px-6 mt-20">
+          <!-- Black & White Section -->
+          <div class="mb-32">
+            <div class="text-center mb-16">
+              <span
+                class="text-gold font-bold tracking-widest uppercase text-xs"
+                >Standard Production</span
+              >
+              <h2 class="text-3xl font-serif font-bold text-navy mt-2">
+                Black & White Packages
+              </h2>
+              <div class="w-20 h-1 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <!-- B&W Package 1 -->
+              <div
+                class="package-card bg-white border border-slate-100 p-8 relative flex flex-col h-full"
+              >
+                <div
+                  class="absolute top-0 right-0 bg-gold text-navy px-4 py-1 text-[10px] font-bold uppercase tracking-widest"
+                >
+                  Standard
+                </div>
+                <h3 class="text-xl font-serif font-bold text-navy mb-2">
+                  KIZUNA B&W PACKAGE 1
+                </h3>
+                <div class="text-3xl font-bold text-gold mb-6">
+                  $1,099
+                  <span
+                    class="text-xs text-slate-400 font-normal uppercase tracking-widest"
+                    >Start-to-Finish</span
+                  >
+                </div>
+
+                <ul class="space-y-4 text-sm text-slate-600 mb-8 flex-grow">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Available Format: Paperback & E-Book</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Custom text and layout formatting</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Author-Designed Cover Support</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Registration with Books in Print database</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Copyrights & ISBN Assignment</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Library of Congress Registration</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Worldwide Online Book Distribution</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Unlimited Image Insertion</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>4 Complimentary Paperback copies</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Social Media Creation (FB, IG, TW)</span>
+                  </li>
+                </ul>
+                <a
+                  href="contact.html"
+                  class="block text-center border border-navy text-navy hover:bg-navy hover:text-white py-3 font-bold uppercase tracking-widest text-[10px] transition-all"
+                  >Select Package</a
+                >
+              </div>
+
+              <!-- B&W Package 2 -->
+              <div
+                class="package-card bg-navy text-white p-8 relative flex flex-col h-full shadow-2xl"
+              >
+                <div
+                  class="absolute top-0 right-0 bg-gold text-navy px-4 py-1 text-[10px] font-bold uppercase tracking-widest"
+                >
+                  Premium
+                </div>
+                <h3 class="text-xl font-serif font-bold mb-2">
+                  KIZUNA B&W PACKAGE 2
+                </h3>
+                <div class="text-3xl font-bold text-gold mb-6">
+                  $2,199
+                  <span
+                    class="text-xs text-slate-400 font-normal uppercase tracking-widest"
+                    >Full Production</span
+                  >
+                </div>
+
+                <ul class="space-y-4 text-sm text-slate-300 mb-8 flex-grow">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Available Format: Paperback, Hardback & E-Book</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Custom-Designed Professional Cover</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span
+                      >All Registrations (ISBN, Copyright, LoC, Books in
+                      Print)</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Worldwide Online Book Distribution</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Online book sales & Royalty Accounting</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Unlimited Corrections during Production</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>10 Paperback + 5 Hardback Complimentary Copies</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Social Media Creation for the book</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Book Returns Insurance (12 Months)</span>
+                  </li>
+                </ul>
+                <a
+                  href="contact.html"
+                  class="block text-center bg-gold text-navy hover:bg-gold-light py-3 font-bold uppercase tracking-widest text-[10px] transition-all"
+                  >Select Package</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Full Color Section -->
+          <div class="mb-32">
+            <div class="text-center mb-16">
+              <span
+                class="text-gold font-bold tracking-widest uppercase text-xs"
+                >Vibrant Visuals</span
+              >
+              <h2 class="text-3xl font-serif font-bold text-navy mt-2">
+                Full Color Packages
+              </h2>
+              <div class="w-20 h-1 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <!-- Full Color Package 1 -->
+              <div
+                class="package-card bg-white border border-slate-100 p-8 relative flex flex-col h-full"
+              >
+                <div
+                  class="absolute top-0 right-0 bg-gold text-navy px-4 py-1 text-[10px] font-bold uppercase tracking-widest"
+                >
+                  Basic Color
+                </div>
+                <h3 class="text-xl font-serif font-bold text-navy mb-2">
+                  KIZUNA COLOR PACKAGE 1
+                </h3>
+                <div class="text-3xl font-bold text-gold mb-6">
+                  $1,599
+                  <span
+                    class="text-xs text-slate-400 font-normal uppercase tracking-widest"
+                    >Essential</span
+                  >
+                </div>
+
+                <ul class="space-y-4 text-sm text-slate-600 mb-8 flex-grow">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Available Format: Paperback & E-Book</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Custom text and layout formatting</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Author-Designed Cover Support</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Assign ISBN & Copyrights Registration</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>3 Advance Illustration Services</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>4 Complimentary Paperback copies</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Social Media Brand Creation</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Professional Online Distribution</span>
+                  </li>
+                </ul>
+                <a
+                  href="contact.html"
+                  class="block text-center border border-navy text-navy hover:bg-navy hover:text-white py-3 font-bold uppercase tracking-widest text-[10px] transition-all"
+                  >Select Package</a
+                >
+              </div>
+
+              <!-- Full Color Package 2 -->
+              <div
+                class="package-card bg-navy text-white p-8 relative flex flex-col h-full shadow-2xl"
+              >
+                <div
+                  class="absolute top-0 right-0 bg-gold text-navy px-4 py-1 text-[10px] font-bold uppercase tracking-widest"
+                >
+                  Pro Color
+                </div>
+                <h3 class="text-xl font-serif font-bold mb-2">
+                  KIZUNA COLOR PACKAGE 2
+                </h3>
+                <div class="text-3xl font-bold text-gold mb-6">
+                  $2,399
+                  <span
+                    class="text-xs text-slate-400 font-normal uppercase tracking-widest"
+                    >Ultimate</span
+                  >
+                </div>
+
+                <ul class="space-y-4 text-sm text-slate-300 mb-8 flex-grow">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Available Format: Paperback, Hardback & E-Book</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Custom-Designed Professional Cover</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>5 Advance Illustration Services</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>FREE BASIC WEBSITE Integration</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>10 Paperback + 5 Hardback Complimentary Copies</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Book Returns Insurance (12 Months)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Assignments of ISBN, LoC, & Copyrights</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Worldwide Online Book Distribution</span>
+                  </li>
+                </ul>
+                <a
+                  href="contact.html"
+                  class="block text-center bg-gold text-navy hover:bg-gold-light py-3 font-bold uppercase tracking-widest text-[10px] transition-all"
+                  >Select Package</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Children's Book Section -->
+          <div class="mb-32">
+            <div class="text-center mb-16">
+              <span
+                class="text-gold font-bold tracking-widest uppercase text-xs"
+                >For Young Readers</span
+              >
+              <h2 class="text-3xl font-serif font-bold text-navy mt-2">
+                Children's Book Packages
+              </h2>
+              <div class="w-20 h-1 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <!-- Children's Book Package 1 -->
+              <div
+                class="package-card bg-white border border-slate-100 p-8 relative flex flex-col h-full"
+              >
+                <div
+                  class="absolute top-0 right-0 bg-gold text-navy px-4 py-1 text-[10px] font-bold uppercase tracking-widest"
+                >
+                  Storyteller
+                </div>
+                <h3 class="text-xl font-serif font-bold text-navy mb-2">
+                  KIZUNA PACKAGE 1
+                </h3>
+                <div class="text-3xl font-bold text-gold mb-6">
+                  $2,199
+                  <span
+                    class="text-xs text-slate-400 font-normal uppercase tracking-widest"
+                    >Complete</span
+                  >
+                </div>
+
+                <ul class="space-y-4 text-sm text-slate-600 mb-8 flex-grow">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Available Format: Paperback & E-Book</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Custom text and layout formatting</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>5 Advance Illustration Services</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>4 Complimentary Paperback copies</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Registration with Books in Print database</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Assignments of ISBN & Copyrights</span>
+                  </li>
+                </ul>
+                <a
+                  href="contact.html"
+                  class="block text-center border border-navy text-navy hover:bg-navy hover:text-white py-3 font-bold uppercase tracking-widest text-[10px] transition-all"
+                  >Select Package</a
+                >
+              </div>
+
+              <!-- Children's Book Package 2 -->
+              <div
+                class="package-card bg-navy text-white p-8 relative flex flex-col h-full shadow-2xl"
+              >
+                <div
+                  class="absolute top-0 right-0 bg-gold text-navy px-4 py-1 text-[10px] font-bold uppercase tracking-widest"
+                >
+                  Masterpiece
+                </div>
+                <h3 class="text-xl font-serif font-bold mb-2">
+                  KIZUNA PACKAGE 2
+                </h3>
+                <div class="text-3xl font-bold text-gold mb-6">
+                  $3,299
+                  <span
+                    class="text-xs text-slate-400 font-normal uppercase tracking-widest"
+                    >Elite</span
+                  >
+                </div>
+
+                <ul class="space-y-4 text-sm text-slate-300 mb-8 flex-grow">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Available Format: Paperback, Hardback & E-Book</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Custom-Designed Professional Cover</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>10 Advance Illustration Services</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>FREE ADVANCE WEBSITE Creation</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>15 Paperback + 10 Hardback Complimentary Copies</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Book Returns Insurance (12 Months)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-gold mt-1 mr-3"></i>
+                    <span>Studio of Books Bookstore Availability</span>
+                  </li>
+                </ul>
+                <a
+                  href="contact.html"
+                  class="block text-center bg-gold text-navy hover:bg-gold-light py-3 font-bold uppercase tracking-widest text-[10px] transition-all"
+                  >Select Package</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Services (From Excel MARKETING Sheet) -->
+          <div class="bg-white border border-slate-100 p-12 mt-20">
+            <div class="mb-12">
+              <h2 class="text-2xl font-serif font-bold text-navy">
+                Additional Publishing Services
+              </h2>
+              <p class="text-slate-500 text-sm mt-2">
+                Enhance your publishing journey with our specialized add-on
+                services.
+              </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
+              <div
+                class="flex justify-between items-center border-b border-slate-100 pb-4"
+              >
+                <span
+                  class="text-xs font-bold uppercase tracking-wider text-navy"
+                  >Bookstore Returnability (12 mo)</span
+                >
+                <span class="text-gold font-bold text-sm">$499</span>
+              </div>
+              <div
+                class="flex justify-between items-center border-b border-slate-100 pb-4"
+              >
+                <span
+                  class="text-xs font-bold uppercase tracking-wider text-navy"
+                  >100% Royalty Program</span
+                >
+                <span class="text-gold font-bold text-sm">$3,599</span>
+              </div>
+              <div
+                class="flex justify-between items-center border-b border-slate-100 pb-4"
+              >
+                <span
+                  class="text-xs font-bold uppercase tracking-wider text-navy"
+                  >Kirkus Indie Review</span
+                >
+                <span class="text-gold font-bold text-sm">$2,099</span>
+              </div>
+              <div
+                class="flex justify-between items-center border-b border-slate-100 pb-4"
+              >
+                <span
+                  class="text-xs font-bold uppercase tracking-wider text-navy"
+                  >Pacific Book Review</span
+                >
+                <span class="text-gold font-bold text-sm">$2,599</span>
+              </div>
+              <div
+                class="flex justify-between items-center border-b border-slate-100 pb-4"
+              >
+                <span
+                  class="text-xs font-bold uppercase tracking-wider text-navy"
+                  >Publisher Migration Service</span
+                >
+                <span class="text-gold font-bold text-sm">$399</span>
+              </div>
+              <div
+                class="flex justify-between items-center border-b border-slate-100 pb-4"
+              >
+                <span
+                  class="text-xs font-bold uppercase tracking-wider text-navy"
+                  >Author Interview Production</span
+                >
+                <span class="text-gold font-bold text-sm">$4,999</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-20">
+      <div
+        class="container mx-auto px-6 grid md:grid-cols-3 gap-16 border-b border-slate-800 pb-16"
+      >
+        <div>
+          <div class="flex items-center space-x-3 mb-6 cursor-pointer">
+            <span class="text-lg font-serif font-bold tracking-widest uppercase"
+              >Kizuna Global</span
+            >
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-xs">
+            Elevating creators through strategic publishing and global marketing
+            solutions since 2026.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-8">
+          <div>
+            <h5
+              class="text-gold font-bold uppercase text-[12px] tracking-[0.2em] mb-6"
+            >
+              Explore
+            </h5>
+            <ul class="space-y-3 text-[12px] text-slate-400">
+              <li>
+                <a href="about.html" class="hover:text-white transition-colors"
+                  >Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="hover:text-white transition-colors"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="portfolio.html"
+                  class="hover:text-white transition-colors"
+                  >Portfolio</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5
+              class="text-gold font-bold uppercase text-[12px] tracking-[0.2em] mb-6"
+            >
+              Contact
+            </h5>
+            <ul class="space-y-3 text-[12px] text-slate-400">
+              <li>30 N Gould St STE R Sheridan, WY 82801, USA</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h5
+            class="text-gold font-bold uppercase text-[12px] tracking-[0.2em] mb-6"
+          >
+            The Global Report
+          </h5>
+          <p class="text-slate-400 text-[12px] mb-4">
+            Insights on the future of international publishing.
+          </p>
+          <div class="flex">
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="bg-slate-800 border-none px-4 py-3 text-xs w-full outline-none focus:ring-1 focus:ring-gold text-white"
+            />
+            <button class="bg-gold px-6 text-navy hover:bg-gold-light">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto px-6 pt-10 text-center">
+        <p
+          class="text-[12px] text-slate-500 font-bold tracking-[0.2em] uppercase"
+        >
+          &copy; 2026 Kizuna Global Services. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("menu-btn").addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+
+      window.onload = () => {
+        // Initialize Reveal Animation
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("revealed");
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+
+        document
+          .querySelectorAll(".reveal-from-left")
+          .forEach((el) => revealObserver.observe(el));
+      };
+    </script>
+  </body>
+</html>
