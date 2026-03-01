@@ -1,4 +1,4 @@
 [submodule "kiz"]
     path = kiz
-    url = https://github.com/kizunaglobalservices/kizunawebsite
+	url = https://github.com/kizunaglobalservices/kiz.git
     branch = staging
