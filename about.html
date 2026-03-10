@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -31,7 +31,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://kizunaglobals.com/about.html" />
-    <meta property="og:image" content="./kizuna-logo-temp.png" />
+    <meta property="og:image" content="./kizuna-logo-white.png" />
 
     <!-- Tailwind CSS with Custom Config -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -79,7 +79,7 @@
 
     <style type="text/css">
       body {
-        background-color: #fcfcfc;
+        background-color: #0a192f;
         overflow-x: hidden;
       }
 
@@ -92,7 +92,9 @@
       .reveal-from-left {
         opacity: 0;
         transform: translateX(-30px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        transition:
+          opacity 0.8s ease-out,
+          transform 0.8s ease-out;
       }
 
       .reveal-from-left.revealed {
@@ -101,7 +103,7 @@
       }
     </style>
   </head>
-  <body class="text-navy antialiased">
+  <body class="bg-navy text-white antialiased">
     <!-- Header / Navigation -->
     <header class="fixed w-full z-50 bg-navy text-white shadow-2xl">
       <div
@@ -113,7 +115,7 @@
           class="flex items-center space-x-4 cursor-pointer group"
         >
           <div class="relative flex items-center justify-center">
-            <img src="./logo-k.png" alt="" width="50" />
+            <img src="./kizuna-logo-white.png" alt="" width="50" />
           </div>
           <div class="flex flex-col leading-none border-l border-white/10 pl-4">
             <span class="text-xl font-serif font-bold tracking-widest uppercase"
@@ -142,7 +144,8 @@
             <button
               class="flex items-center hover:text-gold transition-colors py-2 uppercase tracking-widest focus:outline-none"
             >
-              Services <i class="fas fa-chevron-down ml-2 text-[10px]"></i>
+              Services
+              <i class="fas fa-chevron-down ml-2 text-[10px]"></i>
             </button>
             <div
               class="absolute left-0 mt-0 w-48 bg-navy border border-gold/20 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
@@ -219,69 +222,656 @@
     </header>
 
     <main>
-      <!-- Page: ABOUT -->
-      <section id="about" class="pt-32 pb-20 bg-white">
+      <!-- Hero / Header Section -->
+      <section class="pt-48 pb-16">
+        <div class="container mx-auto px-6 text-center">
+          <h2
+            class="text-gold font-bold tracking-[0.3em] uppercase text-[10px] mb-4"
+          >
+            Expertise & Credentials
+          </h2>
+          <h3 class="text-5xl md:text-6xl font-serif font-bold mb-8 text-white">
+            Meet <span class="italic">Kizuna Global</span>
+          </h3>
+          <p
+            class="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed font-light"
+          >
+            Certified publishing professionals, award-winning collaborators, and
+            trusted guides for authors navigating their journey from manuscript
+            to marketplace.
+          </p>
+        </div>
+      </section>
+
+      <div class="container mx-auto px-6">
+        <hr class="border-white/10" />
+      </div>
+
+      <!-- Section: Education & Professional Development -->
+      <section class="py-24">
         <div class="container mx-auto px-6">
-          <div class="flex flex-col lg:flex-row items-center gap-16">
-            <div class="lg:w-1/2 relative">
+          <h2
+            class="text-gold font-bold tracking-[0.3em] uppercase text-[10px] mb-4"
+          >
+            Education & Professional Development
+          </h2>
+          <h3 class="text-4xl font-serif font-bold mb-3 text-white">
+            Training, Certifications & Courses
+          </h3>
+          <p class="text-slate-500 mb-12 text-sm italic">
+            A commitment to craft through ongoing education in editing,
+            publishing, marketing, and copyright.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Program 1 -->
+            <div
+              class="bg-white/5 border border-white/10 p-10 hover:border-gold/30 transition-all"
+            >
               <div
-                class="absolute -top-4 -left-4 w-24 h-24 bg-gold-light opacity-20 -z-10"
-              ></div>
-              <img
-                src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80"
-                class="shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
-                alt="Office"
-              />
-              <div
-                class="absolute -bottom-8 -right-8 bg-navy p-8 hidden md:block"
+                class="flex items-center text-gold text-[10px] font-bold tracking-widest uppercase mb-4"
               >
-                <p class="text-gold font-serif text-3xl italic">Since 2012</p>
+                <i class="fas fa-certificate mr-2 text-[8px]"></i> Certification
+              </div>
+              <h4 class="text-2xl font-serif font-bold mb-4 text-white">
+                Editing Certification Program
+              </h4>
+              <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                Advanced coursework in developmental editing, line editing, and
+                copyediting through accredited publishing education.
+              </p>
+              <div
+                class="text-[10px] text-slate-500 font-bold tracking-widest uppercase"
+              >
+                Credential • 2022
               </div>
             </div>
-            <div class="lg:w-1/2">
-              <h2
-                class="text-gold font-bold tracking-widest uppercase text-sm mb-4"
+
+            <!-- Program 2 -->
+            <div
+              class="bg-white/5 border border-white/10 p-10 hover:border-gold/30 transition-all"
+            >
+              <div
+                class="flex items-center text-gold text-[10px] font-bold tracking-widest uppercase mb-4"
               >
-                Our Heritage
-              </h2>
-              <h3 class="text-4xl font-serif font-bold mb-6 text-navy">
-                Bridging Borders Through
-                <span class="italic text-gold">Storytelling</span>
-              </h3>
-              <p class="text-slate-600 mb-6 leading-relaxed">
-                At Kizuna Global Services, we believe every story deserves a
-                global stage. Our name, "Kizuna" (Japanese for "bonds"),
-                reflects our commitment to bridging the gap between creators and
-                international markets.
-              </p>
-              <p
-                class="text-slate-600 mb-8 leading-relaxed font-jp text-lg border-l-2 border-gold/30 pl-6 italic"
-              >
-                Kizuna: referring to deep human connections built on mutual
-                trust and support.
+                <i class="fas fa-graduation-cap mr-2 text-[8px]"></i> Education
+              </div>
+              <h4 class="text-2xl font-serif font-bold mb-4 text-white">
+                Publishing Industry Workshop
+              </h4>
+              <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                Intensive training on the full publishing lifecycle—from
+                manuscript acquisition to global distribution and royalty
+                management.
               </p>
               <div
-                class="grid grid-cols-2 gap-8 pt-6 border-t border-slate-100"
+                class="text-[10px] text-slate-500 font-bold tracking-widest uppercase"
               >
-                <div>
-                  <span class="block text-3xl font-serif font-bold text-gold"
-                    >500+</span
+                Workshop • 2023
+              </div>
+            </div>
+
+            <!-- Program 3 -->
+            <div
+              class="bg-white/5 border border-white/10 p-10 hover:border-gold/30 transition-all"
+            >
+              <div
+                class="flex items-center text-gold text-[10px] font-bold tracking-widest uppercase mb-4"
+              >
+                <i class="fas fa-pen-nib mr-2 text-[8px]"></i> Course
+              </div>
+              <h4 class="text-2xl font-serif font-bold mb-4 text-white">
+                Creative Writing & Narrative Structure
+              </h4>
+              <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                Deep dive into story architecture, voice development, and genre
+                conventions to better serve authors across all categories.
+              </p>
+              <div
+                class="text-[10px] text-slate-500 font-bold tracking-widest uppercase"
+              >
+                Completed • 2021
+              </div>
+            </div>
+
+            <!-- Program 4 -->
+            <div
+              class="bg-white/5 border border-white/10 p-10 hover:border-gold/30 transition-all"
+            >
+              <div
+                class="flex items-center text-gold text-[10px] font-bold tracking-widest uppercase mb-4"
+              >
+                <i class="fas fa-gavel mr-2 text-[8px]"></i> Copyright
+              </div>
+              <h4 class="text-2xl font-serif font-bold mb-4 text-white">
+                Copyright Law for Publishers
+              </h4>
+              <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                Specialized training in intellectual property law, copyright
+                registration, Library of Congress filings, and author rights.
+              </p>
+              <div
+                class="text-[10px] text-slate-500 font-bold tracking-widest uppercase"
+              >
+                Completed • 2023
+              </div>
+            </div>
+
+            <!-- Program 5 -->
+            <div
+              class="bg-white/5 border border-white/10 p-10 hover:border-gold/30 transition-all"
+            >
+              <div
+                class="flex items-center text-gold text-[10px] font-bold tracking-widest uppercase mb-4"
+              >
+                <i class="fas fa-bullhorn mr-2 text-[8px]"></i> Marketing
+              </div>
+              <h4 class="text-2xl font-serif font-bold mb-4 text-white">
+                Author Platform & Book Marketing
+              </h4>
+              <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                Social media strategy, email marketing, pre-launch campaigns,
+                and retail positioning for independent and hybrid authors.
+              </p>
+              <div
+                class="text-[10px] text-slate-500 font-bold tracking-widest uppercase"
+              >
+                Completed • 2024
+              </div>
+            </div>
+
+            <!-- Program 6 -->
+            <div
+              class="bg-white/5 border border-white/10 p-10 hover:border-gold/30 transition-all"
+            >
+              <div
+                class="flex items-center text-gold text-[10px] font-bold tracking-widest uppercase mb-4"
+              >
+                <i class="fas fa-palette mr-2 text-[8px]"></i> Design
+              </div>
+              <h4 class="text-2xl font-serif font-bold mb-4 text-white">
+                Cover Design & Visual Storytelling
+              </h4>
+              <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                Professional training in book cover design principles,
+                typography, and how visual identity drives reader engagement and
+                sales.
+              </p>
+              <div
+                class="text-[10px] text-slate-500 font-bold tracking-widest uppercase"
+              >
+                Completed • 2022
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container mx-auto px-6">
+        <hr class="border-white/10" />
+      </div>
+
+      <!-- Section: Honors -->
+      <section class="py-24">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-gold font-bold tracking-[0.3em] uppercase text-[10px] mb-4"
+          >
+            Honors
+          </h2>
+          <h3 class="text-4xl font-serif font-bold mb-3 text-white">
+            Awards & Recognitions
+          </h3>
+          <p class="text-slate-500 mb-12 text-sm italic">
+            Personal and team achievements reflecting a deep dedication to
+            excellence in writing and publishing support.
+          </p>
+
+          <div class="space-y-4">
+            <!-- Award 1 -->
+            <div
+              class="border border-white/10 bg-white/2 p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6"
+            >
+              <div class="flex-1">
+                <div class="flex items-center gap-4 mb-2">
+                  <i class="fas fa-medal text-gold"></i>
+                  <h4
+                    class="text-xl font-serif font-bold text-white leading-none"
                   >
-                  <span
-                    class="text-[10px] font-bold uppercase tracking-widest text-slate-400"
-                    >Authors Globalized</span
-                  >
+                    Excellence in Independent Publishing Support
+                  </h4>
                 </div>
-                <div>
-                  <span class="block text-3xl font-serif font-bold text-gold"
-                    >12</span
+                <p class="text-slate-500 text-sm leading-relaxed pl-8">
+                  Recognized for outstanding contribution to author success in
+                  the independent publishing space, helping lead global authors
+                  to achieve bestseller status.
+                </p>
+              </div>
+              <div
+                class="text-sm font-bold tracking-widest text-gold tabular-nums"
+              >
+                2024
+              </div>
+            </div>
+
+            <!-- Award 2 -->
+            <div
+              class="border border-white/10 bg-white/2 p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6"
+            >
+              <div class="flex-1">
+                <div class="flex items-center gap-4 mb-2">
+                  <i class="fas fa-users text-gold"></i>
+                  <h4
+                    class="text-xl font-serif font-bold text-white leading-none"
                   >
-                  <span
-                    class="text-[10px] font-bold uppercase tracking-widest text-slate-400"
-                    >Global Hubs</span
+                    Best Editorial Team — Internal Recognition Award
+                  </h4>
+                </div>
+                <p class="text-slate-500 text-sm leading-relaxed pl-8">
+                  Team award acknowledging collective effort in delivering
+                  error-free manuscript production across a full calendar year
+                  of client projects.
+                </p>
+              </div>
+              <div
+                class="text-sm font-bold tracking-widest text-gold tabular-nums"
+              >
+                2023
+              </div>
+            </div>
+
+            <!-- Award 3 -->
+            <div
+              class="border border-white/10 bg-white/2 p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6"
+            >
+              <div class="flex-1">
+                <div class="flex items-center gap-4 mb-2">
+                  <i class="fas fa-star text-gold"></i>
+                  <h4
+                    class="text-xl font-serif font-bold text-white leading-none"
                   >
+                    Author's Choice Award — Client Voted
+                  </h4>
+                </div>
+                <p class="text-slate-500 text-sm leading-relaxed pl-8">
+                  Voted by Kizuna Global clients as the most helpful team in
+                  guiding their publishing journey from concept to distribution.
+                </p>
+              </div>
+              <div
+                class="text-sm font-bold tracking-widest text-gold tabular-nums"
+              >
+                2024
+              </div>
+            </div>
+
+            <!-- Award 4 -->
+            <div
+              class="border border-white/10 bg-white/2 p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6"
+            >
+              <div class="flex-1">
+                <div class="flex items-center gap-4 mb-2">
+                  <i class="fas fa-award text-gold"></i>
+                  <h4
+                    class="text-xl font-serif font-bold text-white leading-none"
+                  >
+                    Finalist — Regional Creative Writing Competition
+                  </h4>
+                </div>
+                <p class="text-slate-500 text-sm leading-relaxed pl-8">
+                  Personal recognition for creative non-fiction writing, placing
+                  in the top 5 entries out of over 100 submissions.
+                </p>
+              </div>
+              <div
+                class="text-sm font-bold tracking-widest text-gold tabular-nums"
+              >
+                2021
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container mx-auto px-6">
+        <hr class="border-white/10" />
+      </div>
+
+      <!-- Section: Testimonials -->
+      <section class="py-24">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-gold font-bold tracking-[0.3em] uppercase text-[10px] mb-4"
+          >
+            From the Authors we Serve
+          </h2>
+          <h3 class="text-4xl font-serif font-bold mb-3 text-white">
+            What Writers Say
+          </h3>
+          <p class="text-slate-500 mb-12 text-sm italic">
+            Kizuna Global has guided authors through editing, cover design, and
+            every step of the publishing process.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+            <!-- Testimonial 1 -->
+            <div class="relative pl-12">
+              <i
+                class="fas fa-quote-left absolute left-0 top-0 text-gold text-2xl opacity-50"
+              ></i>
+              <p class="text-slate-300 italic mb-6 leading-relaxed">
+                "Kizuna transformed my rough manuscript into something I'm
+                genuinely proud to put my name on. Their editorial eye is sharp,
+                but they never lost my voice in the process."
+              </p>
+              <div>
+                <span class="block text-white font-bold">Maria H.</span>
+                <span class="block text-slate-500 text-xs mb-3 italic"
+                  >Author, Roots Untangled (Debut Memoir)</span
+                >
+                <div class="flex text-gold text-[10px] gap-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
               </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="relative pl-12">
+              <i
+                class="fas fa-quote-left absolute left-0 top-0 text-gold text-2xl opacity-50"
+              ></i>
+              <p class="text-slate-300 italic mb-6 leading-relaxed">
+                "From cover design to final ISBN registration, the Kizuna team
+                walked me through every step. As a first-time author, their
+                guidance felt like having a seasoned professional in my corner."
+              </p>
+              <div>
+                <span class="block text-white font-bold">James U.</span>
+                <span class="block text-slate-500 text-xs mb-3 italic"
+                  >Author, The Quiet Algorithm (Self-Help)</span
+                >
+                <div class="flex text-gold text-[10px] gap-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="relative pl-12">
+              <i
+                class="fas fa-quote-left absolute left-0 top-0 text-gold text-2xl opacity-50"
+              ></i>
+              <p class="text-slate-300 italic mb-6 leading-relaxed">
+                "I came to Kizuna with a children's book concept and left with a
+                fully illustrated, distributed masterpiece. Their vision for my
+                project exceeded everything I hoped for."
+              </p>
+              <div>
+                <span class="block text-white font-bold">Theresa N.</span>
+                <span class="block text-slate-500 text-xs mb-3 italic"
+                  >Author, Luna and the Starfish (Children's)</span
+                >
+                <div class="flex text-gold text-[10px] gap-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="relative pl-12">
+              <i
+                class="fas fa-quote-left absolute left-0 top-0 text-gold text-2xl opacity-50"
+              ></i>
+              <p class="text-slate-300 italic mb-6 leading-relaxed">
+                "Kizuna reviewed my poetry collection and gave me notes that
+                were honest, constructive, and encouraging all at once. They
+                genuinely care about the writer, not just the product."
+              </p>
+              <div>
+                <span class="block text-white font-bold">Rebecca A.</span>
+                <span class="block text-slate-500 text-xs mb-3 italic"
+                  >Author, Between Two Shores</span
+                >
+                <div class="flex text-gold text-[10px] gap-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="relative pl-12">
+              <i
+                class="fas fa-quote-left absolute left-0 top-0 text-gold text-2xl opacity-50"
+              ></i>
+              <p class="text-slate-300 italic mb-6 leading-relaxed">
+                "Working with Kizuna Global on my historical fiction was
+                extraordinary. They caught inconsistencies I had read past 10
+                times and strengthened every chapter."
+              </p>
+              <div>
+                <span class="block text-white font-bold">Paul L.</span>
+                <span class="block text-slate-500 text-xs mb-3 italic"
+                  >Author, The Cartographer's Daughter</span
+                >
+                <div class="flex text-gold text-[10px] gap-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="relative pl-12">
+              <i
+                class="fas fa-quote-left absolute left-0 top-0 text-gold text-2xl opacity-50"
+              ></i>
+              <p class="text-slate-300 italic mb-6 leading-relaxed">
+                "I was lost trying to migrate from my old publisher. Kizuna
+                handled the entire transition, recovered my rights, and
+                relaunched my book within weeks. Unmatched professionalism."
+              </p>
+              <div>
+                <span class="block text-white font-bold">Sandra K.</span>
+                <span class="block text-slate-500 text-xs mb-3 italic"
+                  >Publisher Migration Client</span
+                >
+                <div class="flex text-gold text-[10px] gap-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container mx-auto px-6">
+        <hr class="border-white/10" />
+      </div>
+
+      <!-- Section: In the Community -->
+      <section class="py-24">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-gold font-bold tracking-[0.3em] uppercase text-[10px] mb-4"
+          >
+            In the Community
+          </h2>
+          <h3 class="text-4xl font-serif font-bold mb-3 text-white">
+            Guest Features & Interviews
+          </h3>
+          <p class="text-slate-500 mb-12 text-sm max-w-2xl italic">
+            Kizuna Global's insights on publishing, storytelling, and author
+            empowerment have been featured across writing communities and
+            platforms.
+          </p>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10"
+          >
+            <!-- Feature 1 -->
+            <div class="bg-navy p-10 hover:bg-white/3 transition-all">
+              <div
+                class="text-gold text-[10px] font-bold tracking-widest uppercase mb-4"
+              >
+                Interview
+              </div>
+              <h4 class="text-xl font-serif font-bold text-white mb-4">
+                "What First-Time Authors Get Wrong About Publishing"
+              </h4>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                Featured interview on The Indie Author Collective, covering
+                common pitfalls and how to navigate the publishing landscape
+                strategically.
+              </p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="bg-navy p-10 hover:bg-white/3 transition-all">
+              <div
+                class="text-gold text-[10px] font-bold tracking-widest uppercase mb-4"
+              >
+                Guest Blog
+              </div>
+              <h4 class="text-xl font-serif font-bold text-white mb-4">
+                "The Cover Design Conversation Every Author Needs to Have"
+              </h4>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                Guest post on WriterUnboxed exploring how cover design
+                communicates genre, tone, and reader expectation.
+              </p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="bg-navy p-10 hover:bg-white/3 transition-all">
+              <div
+                class="text-gold text-[10px] font-bold tracking-widest uppercase mb-4"
+              >
+                Podcast
+              </div>
+              <h4 class="text-xl font-serif font-bold text-white mb-4">
+                "Global Distribution: Getting Your Book to Every Shelf"
+              </h4>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                Podcast appearance on Publishing Uncensored, discussing
+                worldwide distribution channels and royalty structures.
+              </p>
+            </div>
+            <!-- Feature 4 -->
+            <div class="bg-navy p-10 hover:bg-white/3 transition-all">
+              <div
+                class="text-gold text-[10px] font-bold tracking-widest uppercase mb-4"
+              >
+                Webinar
+              </div>
+              <h4 class="text-xl font-serif font-bold text-white mb-4">
+                "Editing Your Manuscript Without Losing Your Voice"
+              </h4>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                Live webinar for the Women Who Write literary community,
+                teaching practical self-editing techniques.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container mx-auto px-6">
+        <hr class="border-white/10" />
+      </div>
+
+      <!-- Section: Stay Connected -->
+      <section class="py-24 pb-32">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-gold font-bold tracking-[0.3em] uppercase text-[10px] mb-4"
+          >
+            Stay Connected
+          </h2>
+          <h3 class="text-4xl font-serif font-bold mb-3 text-white">
+            The Global Report
+          </h3>
+          <p class="text-slate-500 mb-12 text-sm italic max-w-2xl">
+            Kizuna Global's curated newsletter for authors — covering publishing
+            trends, industry tips, marketing insights, and behind-the-scenes
+            stories from real publishing journeys.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-16 items-center">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-4">
+                <i class="fas fa-circle text-gold text-[6px] mt-2"></i>
+                <span class="text-slate-400 text-sm"
+                  >Monthly publishing industry insights & tips</span
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <i class="fas fa-circle text-gold text-[6px] mt-2"></i>
+                <span class="text-slate-400 text-sm"
+                  >Exclusive author spotlights and success stories</span
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <i class="fas fa-circle text-gold text-[6px] mt-2"></i>
+                <span class="text-slate-400 text-sm"
+                  >Early access to Kizuna promotions and workshops</span
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <i class="fas fa-circle text-gold text-[6px] mt-2"></i>
+                <span class="text-slate-400 text-sm"
+                  >Copyright, ISBN, and distribution updates</span
+                >
+              </li>
+              <li class="flex items-start gap-4">
+                <i class="fas fa-circle text-gold text-[6px] mt-2"></i>
+                <span class="text-slate-400 text-sm"
+                  >Free resources and templates for indie authors</span
+                >
+              </li>
+            </ul>
+
+            <div class="bg-white/5 border border-white/10 p-10">
+              <h5
+                class="text-white font-serif font-bold text-xl mb-6 text-center italic"
+              >
+                Join the Global Report Today
+              </h5>
+              <div class="flex flex-col gap-4">
+                <input
+                  type="email"
+                  placeholder="Your Email Address"
+                  class="bg-navy border border-white/10 px-6 py-4 text-sm w-full outline-none focus:border-gold transition-all text-white"
+                />
+                <button
+                  class="bg-gold px-8 py-4 text-navy font-bold hover:bg-gold-light transition-all uppercase tracking-widest text-xs"
+                >
+                  Subscribe Now
+                </button>
+              </div>
+              <p class="text-[10px] text-slate-500 mt-6 text-center">
+                We respect your privacy. Unsubscribe at any time.
+              </p>
             </div>
           </div>
         </div>
@@ -289,94 +879,15 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-navy text-white py-20">
-      <div
-        class="container mx-auto px-6 grid md:grid-cols-3 gap-16 border-b border-slate-800 pb-16"
-      >
-        <div>
-          <div class="flex items-center space-x-3 mb-6 cursor-pointer">
-            <span class="text-lg font-serif font-bold tracking-widest uppercase"
-              >Kizuna Global</span
-            >
-          </div>
-          <p class="text-slate-400 text-xs leading-relaxed max-w-xs">
-            Elevating creators through strategic publishing and global marketing
-            solutions since 2026.
-          </p>
-        </div>
-        <div class="grid grid-cols-2 gap-8">
-          <div>
-            <h5
-              class="text-gold font-bold uppercase text-[12px] tracking-[0.2em] mb-6"
-            >
-              Explore
-            </h5>
-            <ul class="space-y-3 text-[12px] text-slate-400">
-              <li>
-                <a href="about.html" class="hover:text-white transition-colors"
-                  >Our Story</a
-                >
-              </li>
-              <li>
-                <a
-                  href="services.html"
-                  class="hover:text-white transition-colors"
-                  >Marketing</a
-                >
-              </li>
-              <li>
-                <a
-                  href="publishing.html"
-                  class="hover:text-white transition-colors"
-                  >Publishing</a
-                >
-              </li>
-              <li>
-                <a
-                  href="portfolio.html"
-                  class="hover:text-white transition-colors"
-                  >Portfolio</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h5
-              class="text-gold font-bold uppercase text-[10px] tracking-[0.2em] mb-6"
-            >
-              Contact
-            </h5>
-            <ul class="space-y-3 text-[12px] text-slate-400">
-              <li>30 N Gould St STE R Sheridan, WY 82801, USA</li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <h5
-            class="text-gold font-bold uppercase text-[10px] tracking-[0.2em] mb-6"
-          >
-            The Global Report
-          </h5>
-          <p class="text-slate-400 text-[12px] mb-4">
-            Insights on the future of international publishing.
-          </p>
-          <div class="flex">
-            <input
-              type="email"
-              placeholder="Email Address"
-              class="bg-slate-800 border-none px-4 py-3 text-xs w-full outline-none focus:ring-1 focus:ring-gold text-white"
-            />
-            <button class="bg-gold px-6 text-navy hover:bg-gold-light">
-              <i class="fas fa-chevron-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="container mx-auto px-6 pt-10 text-center">
+    <footer class="bg-navy py-12 border-t border-white/10">
+      <div class="container mx-auto px-6 text-center">
         <p
-          class="text-[12px] text-slate-500 font-bold tracking-[0.2em] uppercase"
+          class="text-[10px] text-slate-500 font-bold tracking-[0.2em] uppercase"
         >
-          &copy; 2026 Kizuna Global Services. All Rights Reserved.
+          &copy; 2026 Kizuna Global Services. All Rights Reserved. |
+          <a href="publishing.html" class="hover:text-gold transition-colors"
+            >kizunaglobals.com/publishing</a
+          >
         </p>
       </div>
     </footer>
