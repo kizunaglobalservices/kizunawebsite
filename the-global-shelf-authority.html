@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Kizuna Global Services</title>
+    <meta
+      name="description"
+      content="Explore our industry-leading suite of marketing and publishing services designed to help authors connect with readers and achieve global success."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/public/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+    <link rel="shortcut icon" href="/public/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/public/site.webmanifest" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Services | Kizuna Global Services" />
+    <meta
+      property="og:description"
+      content="Industry-leading marketing and publishing services. From Bookstore Distribution to Media Campaigns, we help your story reach the world."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kizunaglobals.com/services.html" />
+    <meta property="og:image" content="./kizuna-logo-white.png" />
+
+    <!-- Tailwind CSS with Custom Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: {
+              center: true,
+              screens: {
+                sm: "640px",
+                md: "768px",
+                lg: "1024px",
+                xl: "1440px",
+              },
+            },
+            colors: {
+              navy: "#0A192F",
+              gold: {
+                DEFAULT: "#C5A059",
+                light: "#E2C285",
+                dark: "#A38141",
+              },
+              cream: "#FFF9E5",
+            },
+            fontFamily: {
+              serif: ["Playfair Display", "serif"],
+              sans: ["Inter", "sans-serif"],
+              jp: ['"Noto Serif JP"', "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=Noto+Serif+JP:wght@200;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style type="text/css">
+      body {
+        background-color: #ffffff;
+        overflow-x: hidden;
+      }
+
+      .cta-pattern {
+        background-color: #0a192f;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c5a059' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      /* Reveal Animation */
+      .reveal-from-left {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition:
+          opacity 0.8s ease-out,
+          transform 0.8s ease-out;
+      }
+
+      .reveal-from-left.revealed {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .service-card {
+        background-color: #fff9e5;
+        border-bottom: 2px solid #e2c285;
+      }
+
+      .section-header-bar {
+        background-color: #0a192f;
+        color: white;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-header-bar .square {
+        width: 1rem;
+        height: 1rem;
+        background-color: white;
+        margin-right: 0.75rem;
+      }
+    </style>
+  </head>
+  <body class="text-navy antialiased">
+    <!-- Header / Navigation -->
+    <header class="fixed w-full z-50 bg-navy text-white shadow-2xl">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <a
+          href="index.html"
+          class="flex items-center space-x-4 cursor-pointer group"
+        >
+          <div class="relative flex items-center justify-center">
+            <img src="./kizuna-logo-white.png" alt="" width="50" />
+          </div>
+          <div class="flex flex-col leading-none border-l border-white/10 pl-4">
+            <span class="text-xl font-serif font-bold tracking-widest uppercase"
+              >Kizuna</span
+            >
+            <span
+              class="text-[12px] text-gold tracking-[0.3em] uppercase font-bold"
+              >Global Services</span
+            >
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav
+          class="hidden md:flex space-x-8 text-[12px] font-bold tracking-widest uppercase items-center"
+        >
+          <a href="index.html" class="hover:text-gold transition-colors py-2"
+            >Home</a
+          >
+          <a href="about.html" class="hover:text-gold transition-colors py-2"
+            >About</a
+          >
+
+          <!-- Services Dropdown -->
+          <div class="relative group">
+            <button
+              class="flex items-center text-gold transition-colors py-2 uppercase tracking-widest focus:outline-none"
+            >
+              Services <i class="fas fa-chevron-down ml-2 text-[10px]"></i>
+            </button>
+            <div
+              class="absolute left-0 mt-0 w-48 bg-navy border border-gold/20 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+            >
+              <a
+                href="services.html"
+                class="block px-4 py-3 hover:bg-gold hover:text-navy transition-colors bg-gold/10 text-gold"
+                >Marketing</a
+              >
+              <a
+                href="publishing.html"
+                class="block px-4 py-3 hover:bg-gold hover:text-navy transition-colors"
+                >Publishing</a
+              >
+            </div>
+          </div>
+
+          <a
+            href="portfolio.html"
+            class="hover:text-gold transition-colors py-2"
+            >Portfolio</a
+          >
+          <a
+            href="contact.html"
+            class="hover:text-gold transition-colors py-2 border border-gold px-4 hover:bg-gold hover:text-navy transition-all"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gold text-2xl focus:outline-none">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden bg-navy border-t border-slate-800 p-6 flex flex-col space-y-4 md:hidden"
+      >
+        <a
+          href="index.html"
+          class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+          >About</a
+        >
+        <a
+          href="services.html"
+          class="text-gold uppercase text-xs font-bold tracking-widest"
+          >Marketing Services</a
+        >
+        <a
+          href="publishing.html"
+          class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+          >Publishing Services</a
+        >
+        <a
+          href="#!"
+          class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+          >Portfolio</a
+        >
+        <a
+          href="#!"
+          class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
+          >Contact</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-navy text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+          <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.1"/>
+              </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#grid)" />
+          </svg>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center">
+          <div class="inline-block px-4 py-1 border border-gold/30 rounded-full mb-6 reveal-from-left">
+            <span class="text-gold text-[10px] font-bold uppercase tracking-[0.3em]">Elite Bookstore Consignment</span>
+          </div>
+          <h1 class="text-4xl md:text-7xl font-serif font-bold mb-6 reveal-from-left" style="transition-delay: 0.1s">
+            The Global Shelf Authority™
+          </h1>
+          <p class="text-xl md:text-2xl font-serif text-gold-light italic mb-10 reveal-from-left" style="transition-delay: 0.2s">
+            Your Book. Globally Positioned. Professionally Placed. Powerfully Seen.
+          </p>
+          <div class="max-w-3xl mx-auto text-slate-300 leading-relaxed reveal-from-left" style="transition-delay: 0.3s">
+            Step into the highest level of publishing visibility with our flagship, top-of-the-line service designed for authors who are ready to secure real bookstore presence across the world’s most influential markets.
+          </div>
+        </div>
+      </section>
+
+      <!-- Strategy Section -->
+      <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal-from-left">
+              <h2 class="text-3xl md:text-4xl font-serif font-bold text-navy mb-8">
+                Not Just Distribution.<br/>
+                <span class="text-gold italic">Strategic Placement.</span>
+              </h2>
+              <p class="text-slate-600 mb-8 leading-relaxed">
+                This is not mass distribution. This is strategic global placement. We position your book inside active retail bookstores across Japan, the United States, the United Kingdom, and China—supported by direct outreach, professional coordination, and premium presentation.
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-start space-x-4">
+                  <div class="mt-1 bg-gold/10 p-2 rounded-sm"><i class="fas fa-check text-gold text-xs"></i></div>
+                  <div>
+                    <h4 class="text-navy font-bold text-sm uppercase tracking-wider">International bookstore presence</h4>
+                    <p class="text-slate-500 text-xs">Real physical placement, not just online listings.</p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <div class="mt-1 bg-gold/10 p-2 rounded-sm"><i class="fas fa-check text-gold text-xs"></i></div>
+                  <div>
+                    <h4 class="text-navy font-bold text-sm uppercase tracking-wider">Carefully selected retail placements</h4>
+                    <p class="text-slate-500 text-xs">Targets high-traffic, relevant literary environments.</p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                  <div class="mt-1 bg-gold/10 p-2 rounded-sm"><i class="fas fa-check text-gold text-xs"></i></div>
+                  <div>
+                    <h4 class="text-navy font-bold text-sm uppercase tracking-wider">High-credibility author positioning</h4>
+                    <p class="text-slate-500 text-xs">Elevates your professional profile on a global scale.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative reveal-from-left" style="transition-delay: 0.2s">
+              <div class="aspect-square bg-slate-100 rounded-sm overflow-hidden shadow-2xl">
+                <!-- Image placeholder with styled overlay -->
+                <div class="absolute inset-0 bg-navy/60 flex items-center justify-center text-center p-12">
+                   <div>
+                      <i class="fas fa-globe-americas text-gold/40 text-8xl mb-6"></i>
+                      <p class="text-white font-serif italic text-2xl">"Where your book transitions from published → positioned → globally recognized."</p>
+                   </div>
+                </div>
+              </div>
+              <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-gold/20 -z-10"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Global Markets -->
+      <section class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-serif font-bold text-navy mb-4">Global Market Placement</h2>
+            <div class="w-24 h-1 bg-gold mx-auto"></div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Japan -->
+            <div class="bg-white p-8 border-t-4 border-red-500 shadow-sm hover:shadow-xl transition-all reveal-from-left">
+              <div class="text-4xl mb-6">🇯🇵</div>
+              <h3 class="text-xl font-serif font-bold text-navy mb-4">Japan</h3>
+              <ul class="text-xs text-slate-500 space-y-3 leading-relaxed">
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> Premium bookstore environments</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> High-value, loyal readers</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> Cultural & design appreciation</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> Brand prestige in Asia</li>
+              </ul>
+            </div>
+            <!-- USA -->
+            <div class="bg-white p-8 border-t-4 border-blue-600 shadow-sm hover:shadow-xl transition-all reveal-from-left" style="transition-delay: 0.1s">
+              <div class="text-4xl mb-6">🇺🇸</div>
+              <h3 class="text-xl font-serif font-bold text-navy mb-4">United States</h3>
+              <ul class="text-xs text-slate-500 space-y-3 leading-relaxed">
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> Maximum market exposure</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> Strong purchasing power</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> Scaling for reorders</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> Ideal for brand expansion</li>
+              </ul>
+            </div>
+            <!-- UK -->
+            <div class="bg-white p-8 border-t-4 border-blue-900 shadow-sm hover:shadow-xl transition-all reveal-from-left" style="transition-delay: 0.2s">
+              <div class="text-4xl mb-6">🇬🇧</div>
+              <h3 class="text-xl font-serif font-bold text-navy mb-4">United Kingdom</h3>
+              <ul class="text-xs text-slate-500 space-y-3 leading-relaxed">
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> Literary credibility</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> Niche audience access</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> European market entry</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> Author credibility boost</li>
+              </ul>
+            </div>
+            <!-- China -->
+            <div class="bg-white p-8 border-t-4 border-red-600 shadow-sm hover:shadow-xl transition-all reveal-from-left" style="transition-delay: 0.3s">
+              <div class="text-4xl mb-6">🇨🇳</div>
+              <h3 class="text-xl font-serif font-bold text-navy mb-4">China</h3>
+              <ul class="text-xs text-slate-500 space-y-3 leading-relaxed">
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> High-growth opportunity</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> Massive expanding readership</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> Strategic Asian positioning</li>
+                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gold rounded-full mr-2"></span> Cross-border reach</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section class="py-24 bg-navy text-white">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4">How It Works</h2>
+            <div class="w-24 h-1 bg-gold mx-auto"></div>
+          </div>
+          
+          <div class="relative max-w-4xl mx-auto">
+            <!-- Timeline Line -->
+            <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gold/30 hidden md:block"></div>
+            
+            <div class="space-y-16">
+              <!-- Step 1 -->
+              <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+                <div class="md:w-5/12 text-left md:text-right reveal-from-left">
+                  <h4 class="text-gold font-bold uppercase tracking-widest text-xs mb-2">Step 01</h4>
+                  <h3 class="text-xl font-serif font-bold mb-3">Evaluation & Matching</h3>
+                  <p class="text-slate-400 text-xs">We assess your book and align it with the most suitable global markets.</p>
+                </div>
+                <div class="absolute left-0 md:left-1/2 -ml-2 w-4 h-4 rounded-full bg-gold shadow-[0_0_15px_rgba(197,160,89,0.5)] z-10 md:-translate-x-1/2 hidden md:block"></div>
+                <div class="md:w-5/12"></div>
+              </div>
+              
+              <!-- Step 2 -->
+              <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+                <div class="md:w-5/12 order-2 md:order-1"></div>
+                <div class="absolute left-0 md:left-1/2 -ml-2 w-4 h-4 rounded-full bg-gold shadow-[0_0_15px_rgba(197,160,89,0.5)] z-10 md:-translate-x-1/2 hidden md:block"></div>
+                <div class="md:w-5/12 text-left reveal-from-left">
+                  <h4 class="text-gold font-bold uppercase tracking-widest text-xs mb-2">Step 02</h4>
+                  <h3 class="text-xl font-serif font-bold mb-3">Outreach & Coordination</h3>
+                  <p class="text-slate-400 text-xs">We connect with bookstore partners and secure placement opportunities.</p>
+                </div>
+              </div>
+              
+              <!-- Step 3 -->
+              <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+                <div class="md:w-5/12 text-left md:text-right reveal-from-left">
+                  <h4 class="text-gold font-bold uppercase tracking-widest text-xs mb-2">Step 03</h4>
+                  <h3 class="text-xl font-serif font-bold mb-3">Consignment Placement</h3>
+                  <p class="text-slate-400 text-xs">Your book is placed in selected bookstores where it is displayed and sold.</p>
+                </div>
+                <div class="absolute left-0 md:left-1/2 -ml-2 w-4 h-4 rounded-full bg-gold shadow-[0_0_15px_rgba(197,160,89,0.5)] z-10 md:-translate-x-1/2 hidden md:block"></div>
+                <div class="md:w-5/12"></div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+                <div class="md:w-5/12 order-2 md:order-1"></div>
+                <div class="absolute left-0 md:left-1/2 -ml-2 w-4 h-4 rounded-full bg-gold shadow-[0_0_15px_rgba(197,160,89,0.5)] z-10 md:-translate-x-1/2 hidden md:block"></div>
+                <div class="md:w-5/12 text-left reveal-from-left">
+                  <h4 class="text-gold font-bold uppercase tracking-widest text-xs mb-2">Step 04</h4>
+                  <h3 class="text-xl font-serif font-bold mb-3">Inventory Management</h3>
+                  <p class="text-slate-400 text-xs">We monitor performance and coordinate restocking when needed.</p>
+                </div>
+              </div>
+
+              <!-- Step 5 -->
+              <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+                <div class="md:w-5/12 text-left md:text-right reveal-from-left">
+                  <h4 class="text-gold font-bold uppercase tracking-widest text-xs mb-2">Step 05</h4>
+                  <h3 class="text-xl font-serif font-bold mb-3">Visibility Support</h3>
+                  <p class="text-slate-400 text-xs">Continuous outreach ensures your book remains active and discoverable.</p>
+                </div>
+                <div class="absolute left-0 md:left-1/2 -ml-2 w-4 h-4 rounded-full bg-gold shadow-[0_0_15px_rgba(197,160,89,0.5)] z-10 md:-translate-x-1/2 hidden md:block"></div>
+                <div class="md:w-5/12"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Premium Guarantee -->
+      <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="max-w-4xl mx-auto bg-cream p-12 border-l-8 border-gold shadow-lg reveal-from-left">
+            <h2 class="text-2xl font-serif font-bold text-navy mb-6 flex items-center">
+              <i class="fas fa-award text-gold mr-4"></i> Our Premium Guarantee
+            </h2>
+            <p class="text-navy/80 mb-8 leading-relaxed italic">
+              "While sales depend on reader demand, we guarantee maximum exposure, professional handling, and global positioning advantage."
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 text-sm">
+              <ul class="space-y-3">
+                <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-3"></i> Real bookstore placements—not directories</li>
+                <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-3"></i> Professional retail partner coordination</li>
+              </ul>
+              <ul class="space-y-3">
+                <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-3"></i> Strategic, quality-focused distribution</li>
+                <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-3"></i> Transparent communication & updates</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Choosing Your Tier -->
+      <section class="py-24 bg-slate-50 border-t border-slate-100">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-serif font-bold text-navy mb-4">Choose Your Tier of Global Access</h2>
+            <div class="w-24 h-1 bg-gold mx-auto"></div>
+          </div>
+          
+          <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Premium -->
+            <div class="bg-white p-10 border border-slate-200 rounded-sm hover:border-gold transition-all reveal-from-left">
+              <h3 class="text-gold font-bold uppercase tracking-widest text-xs mb-2">Tier 01</h3>
+              <h4 class="text-2xl font-serif font-bold text-navy mb-4">Premium Tier</h4>
+              <p class="text-slate-500 text-xs mb-8">Best for emerging authors ready for international exposure.</p>
+              <div class="h-px bg-slate-100 mb-8"></div>
+              <ul class="text-xs text-slate-500 space-y-4 mb-10">
+                <li class="flex items-center italic"><i class="fas fa-map-marker-alt text-gold/60 mr-3"></i> Placement in 1–2 countries</li>
+                <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Bookstore consignment setup</li>
+                <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Basic outreach coordination</li>
+                <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Initial placement support</li>
+              </ul>
+              <a href="contact.html" class="block text-center py-3 border border-navy text-navy font-bold uppercase tracking-widest text-[10px] hover:bg-navy hover:text-white transition-all">Select Tier</a>
+            </div>
+            
+            <!-- Elite -->
+            <div class="bg-navy p-10 border-4 border-gold rounded-sm transform scale-105 shadow-2xl z-10 reveal-from-left" style="transition-delay: 0.1s">
+              <div class="absolute top-0 right-0 bg-gold text-navy text-[10px] font-bold uppercase tracking-widest px-4 py-1">Recommended</div>
+              <h3 class="text-gold font-bold uppercase tracking-widest text-xs mb-2">Tier 02</h3>
+              <h4 class="text-2xl font-serif font-bold text-white mb-4">Elite Tier</h4>
+              <p class="text-slate-400 text-xs mb-8">Best for authors scaling their presence globally.</p>
+              <div class="h-px bg-white/10 mb-8"></div>
+              <ul class="text-xs text-slate-300 space-y-4 mb-10">
+                <li class="flex items-center italic"><i class="fas fa-map-marker-alt text-gold mr-3"></i> Placement in 3 countries</li>
+                <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Expanded bookstore network</li>
+                <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Priority outreach & coordination</li>
+                <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Restocking assistance</li>
+                <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Enhanced visibility strategy</li>
+              </ul>
+              <a href="contact.html" class="block text-center py-3 bg-gold text-navy font-bold uppercase tracking-widest text-[10px] hover:bg-gold/80 transition-all">Select Tier</a>
+            </div>
+
+            <!-- Platinum -->
+            <div class="bg-white p-10 border border-slate-200 rounded-sm hover:border-gold transition-all reveal-from-left" style="transition-delay: 0.2s">
+              <h3 class="text-gold font-bold uppercase tracking-widest text-xs mb-2">Tier 03</h3>
+              <h4 class="text-2xl font-serif font-bold text-navy mb-4">Platinum Tier</h4>
+              <p class="text-slate-500 text-xs mb-8">Built for serious authors and brands seeking full authority.</p>
+              <div class="h-px bg-slate-100 mb-8"></div>
+              <ul class="text-xs text-slate-500 space-y-4 mb-10">
+                <li class="flex items-center italic font-bold"><i class="fas fa-map-marker-alt text-gold/60 mr-3"></i> ALL 4 major markets</li>
+                <li class="flex items-center text-navy font-medium"><i class="fas fa-star text-gold mr-3"></i> Priority bookstore selection</li>
+                <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Full-service management</li>
+                <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Performance monitoring</li>
+                <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Premium positioning strategy</li>
+                <li class="flex items-center text-navy font-medium"><i class="fas fa-user-tie text-gold mr-3"></i> Dedicated account handling</li>
+              </ul>
+              <a href="contact.html" class="block text-center py-3 border border-navy text-navy font-bold uppercase tracking-widest text-[10px] hover:bg-navy hover:text-white transition-all">Select Tier</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-20">
+      <div
+        class="container mx-auto px-6 grid md:grid-cols-2 gap-16 border-b border-slate-800 pb-16"
+      >
+        <div>
+          <div class="flex items-center space-x-3 mb-6 cursor-pointer">
+            <span class="text-lg font-serif font-bold tracking-widest uppercase"
+              >Kizuna Global</span
+            >
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-xs">
+            Elevating creators through strategic publishing and global marketing
+            solutions since 2024.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-8">
+          <div>
+            <h5
+              class="text-gold font-bold uppercase text-[12px] tracking-[0.2em] mb-6"
+            >
+              Explore
+            </h5>
+            <ul class="space-y-3 text-[12px] text-slate-400">
+              <li>
+                <a href="about.html" class="hover:text-white transition-colors"
+                  >Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="hover:text-white transition-colors"
+                  >Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="publishing.html"
+                  class="hover:text-white transition-colors"
+                  >Publishing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="portfolio.html"
+                  class="hover:text-white transition-colors"
+                  >Portfolio</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5
+              class="text-gold font-bold uppercase text-[12px] tracking-[0.2em] mb-6"
+            >
+              Contact
+            </h5>
+            <ul class="space-y-3 text-xs text-slate-400">
+              <li>30 N Gould St STE R Sheridan, WY 82801, USA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto px-6 pt-10 text-center">
+        <p
+          class="text-[12px] text-slate-500 font-bold tracking-[0.2em] uppercase"
+        >
+          &copy; 2026 Kizuna Global Services. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("menu-btn").addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+
+      window.onload = () => {
+        // Initialize Reveal Animation
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("revealed");
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+
+        document
+          .querySelectorAll(".reveal-from-left")
+          .forEach((el) => revealObserver.observe(el));
+      };
+    </script>
+  </body>
+</html>
