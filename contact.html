@@ -507,6 +507,32 @@
     </footer>
 
     <script>
+      const handleForm = (event) => {
+        event.preventDefault();
+
+        const form = event.target;
+        const submitButton = form.querySelector('button[type="submit"]');
+        if (submitButton) submitButton.setAttribute("disabled", "disabled");
+
+        const formData = new FormData(form);
+
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        })
+          .then(() => {
+            form.classList.add("hidden");
+            document.getElementById("success-msg").classList.remove("hidden");
+          })
+          .catch((error) => {
+            if (submitButton) submitButton.removeAttribute("disabled");
+            alert(error);
+          });
+      };
+
+      document.querySelector("form").addEventListener("submit", handleForm);
+
       document.getElementById("menu-btn").addEventListener("click", () => {
         document.getElementById("mobile-menu").classList.toggle("hidden");
       });
