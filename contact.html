@@ -314,10 +314,19 @@
               <div class="bg-slate-50 p-8 lg:p-12 border border-slate-100">
                 <form
                   id="contact-form"
-                  onsubmit="handleForm(event)"
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
                   class="space-y-6"
-                  netlify
                 >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p class="hidden">
+                    <label
+                      >Don’t fill this out if you’re human:
+                      <input name="bot-field" />
+                    </label>
+                  </p>
                   <div>
                     <label
                       class="block text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2"
@@ -325,6 +334,7 @@
                     >
                     <input
                       type="text"
+                      name="fullName"
                       required
                       class="w-full bg-white border border-slate-200 px-4 py-3 text-sm outline-none focus:border-gold transition-colors"
                     />
@@ -336,6 +346,7 @@
                     >
                     <input
                       type="email"
+                      name="email"
                       required
                       class="w-full bg-white border border-slate-200 px-4 py-3 text-sm outline-none focus:border-gold transition-colors"
                     />
@@ -346,6 +357,7 @@
                       >Subject</label
                     >
                     <select
+                      name="subject"
                       class="w-full bg-white border border-slate-200 px-4 py-3 text-sm outline-none focus:border-gold transition-colors appearance-none"
                     >
                       <option>Manuscript Review</option>
@@ -361,6 +373,7 @@
                     >
                     <textarea
                       rows="4"
+                      name="message"
                       required
                       class="w-full bg-white border border-slate-200 px-4 py-3 text-sm outline-none focus:border-gold transition-colors"
                     ></textarea>
