@@ -101,7 +101,19 @@
         opacity: 1;
         transform: translateX(0);
       }
+      .trustpilot-widget {
+        position: absolute !important;
+        left: -57px;
+        margin-top: 20px;
+      }
     </style>
+    <!-- TrustBox script -->
+    <script
+      type="text/javascript"
+      src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+      async
+    ></script>
+    <!-- End TrustBox script -->
   </head>
   <body class="bg-navy text-white antialiased">
     <!-- Header / Navigation -->
@@ -151,7 +163,7 @@
               class="absolute left-0 mt-0 w-48 bg-navy border border-gold/20 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
             >
               <a
-                href="services.html"
+                href="marketing.html"
                 class="block px-4 py-3 hover:bg-gold hover:text-navy transition-colors"
                 >Marketing</a
               >
@@ -204,7 +216,7 @@
           >About</a
         >
         <a
-          href="services.html"
+          href="marketing.html"
           class="text-white hover:text-gold uppercase text-xs font-bold tracking-widest"
           >Marketing Services</a
         >
@@ -889,15 +901,95 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-navy py-12 border-t border-white/10">
-      <div class="container mx-auto px-6 text-center">
+    <footer class="bg-navy text-white py-20">
+      <div
+        class="container mx-auto px-6 grid md:grid-cols-2 gap-16 border-b border-slate-800 pb-16"
+      >
+        <div>
+          <div class="flex items-center space-x-3 mb-6 cursor-pointer">
+            <span class="text-lg font-serif font-bold tracking-widest uppercase"
+              >Kizuna Global</span
+            >
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-xs">
+            Elevating creators through strategic publishing and global marketing
+            solutions since 2024.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-8">
+          <div>
+            <h5
+              class="text-gold font-bold uppercase text-[12px] tracking-[0.2em] mb-6"
+            >
+              Explore
+            </h5>
+            <ul class="space-y-3 text-[12px] text-slate-400">
+              <li>
+                <a href="about.html" class="hover:text-white transition-colors"
+                  >Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="marketing.html"
+                  class="hover:text-white transition-colors"
+                  >Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="publishing.html"
+                  class="hover:text-white transition-colors"
+                  >Publishing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="portfolio.html"
+                  class="hover:text-white transition-colors"
+                  >Portfolio</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5
+              class="text-gold font-bold uppercase text-[12px] tracking-[0.2em] mb-6"
+            >
+              Contact
+            </h5>
+            <ul class="space-y-3 text-xs text-slate-400">
+              <li>30 N Gould St STE R Sheridan, WY 82801, USA</li>
+            </ul>
+            <div class="relative">
+              <!-- TrustBox widget - Review Collector -->
+              <div
+                class="trustpilot-widget"
+                data-locale="en-US"
+                data-template-id="56278e9abfbbba0bdcd568bc"
+                data-businessunit-id="69d779b0ed1ddf8d27705ede"
+                data-style-height="52px"
+                data-style-width="100%"
+                data-token="3ab602f2-d3e2-40df-8344-385d09affe01"
+              >
+                <a
+                  href="https://www.trustpilot.com/review/kizunaglobals.com"
+                  target="_blank"
+                  rel="noopener"
+                  >Trustpilot</a
+                >
+              </div>
+              <!-- End TrustBox widget -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-6 pt-10 text-center">
         <p
-          class="text-[10px] text-slate-500 font-bold tracking-[0.2em] uppercase"
+          class="text-[12px] text-slate-500 font-bold tracking-[0.2em] uppercase"
         >
-          &copy; 2026 Kizuna Global Services. All Rights Reserved. |
-          <a href="publishing.html" class="hover:text-gold transition-colors"
-            >kizunaglobals.com/publishing</a
-          >
+          &copy; 2026 Kizuna Global Services. All Rights Reserved.
         </p>
       </div>
     </footer>
@@ -927,3 +1019,4 @@
     </script>
   </body>
 </html>
+

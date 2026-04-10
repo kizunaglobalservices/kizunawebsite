@@ -30,7 +30,10 @@
       content="Industry-leading marketing and publishing services. From Bookstore Distribution to Media Campaigns, we help your story reach the world."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kizunaglobals.com/services.html" />
+    <meta
+      property="og:url"
+      content="https://kizunaglobals.com/marketing.html"
+    />
     <meta property="og:image" content="./kizuna-logo-white.png" />
 
     <!-- Tailwind CSS with Custom Config -->
@@ -123,7 +126,20 @@
         background-color: white;
         margin-right: 0.75rem;
       }
+      .trustpilot-widget {
+        position: absolute !important;
+        left: -57px;
+        margin-top: 20px;
+      }
     </style>
+
+    <!-- TrustBox script -->
+    <script
+      type="text/javascript"
+      src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+      async
+    ></script>
+    <!-- End TrustBox script -->
   </head>
   <body class="text-navy antialiased">
     <!-- Header / Navigation -->
@@ -172,7 +188,7 @@
               class="absolute left-0 mt-0 w-48 bg-navy border border-gold/20 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
             >
               <a
-                href="services.html"
+                href="marketing.html"
                 class="block px-4 py-3 hover:bg-gold hover:text-navy transition-colors bg-gold/10 text-gold"
                 >Marketing</a
               >
@@ -225,7 +241,7 @@
           >About</a
         >
         <a
-          href="services.html"
+          href="marketing.html"
           class="text-gold uppercase text-xs font-bold tracking-widest"
           >Marketing Services</a
         >
@@ -249,20 +265,36 @@
 
     <main>
       <!-- Page: SERVICES -->
-      <section id="services" class="pt-20 pb-24">
-        <!-- Hero Section from Image -->
-        <div class="bg-navy pt-20 pb-16 text-center text-white relative">
-          <div class="container mx-auto px-6">
-            <h1 class="text-6xl font-serif font-bold tracking-[0.2em] mb-2">
-              Marketing Services
+      <section id="services" class="pb-24">
+        <!-- Hero Section -->
+        <section
+          class="relative min-h-[80vh] flex flex-col items-center justify-center px-6 md:px-12 text-center bg-navy text-white overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20"
+          ></div>
+          <div class="relative z-10">
+            <p
+              class="text-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 reveal-from-left"
+            >
+              Kizuna Global Marketing
+            </p>
+            <h1
+              class="text-4xl md:text-7xl font-serif font-bold mb-8 reveal-from-left"
+              style="transition-delay: 0.1s"
+            >
+              Marketing<br /><span class="italic text-gold italic"
+                >Services</span
+              >
             </h1>
-
-            <div class="h-[1px] bg-gold/50 w-full mb-8"></div>
-            <h2 class="text-xl md:text-2xl font-serif text-gold-light italic">
+            <p
+              class="max-w-2xl mx-auto text-slate-300 text-lg md:text-xl font-serif reveal-from-left"
+              style="transition-delay: 0.2s"
+            >
               Amplify Your Book. Reach Your Readers. Build Your Legacy.
-            </h2>
+            </p>
           </div>
-        </div>
+        </section>
 
         <div class="container mx-auto px-6 py-12 text-center">
           <p
@@ -1682,7 +1714,7 @@
               </li>
               <li>
                 <a
-                  href="services.html"
+                  href="marketing.html"
                   class="hover:text-white transition-colors"
                   >Marketing</a
                 >
@@ -1719,6 +1751,26 @@
             <ul class="space-y-3 text-xs text-slate-400">
               <li>30 N Gould St STE R Sheridan, WY 82801, USA</li>
             </ul>
+            <div class="relative">
+              <!-- TrustBox widget - Review Collector -->
+              <div
+                class="trustpilot-widget"
+                data-locale="en-US"
+                data-template-id="56278e9abfbbba0bdcd568bc"
+                data-businessunit-id="69d779b0ed1ddf8d27705ede"
+                data-style-height="52px"
+                data-style-width="100%"
+                data-token="a1aa457a-a3dd-4319-9922-548f58c19f66"
+              >
+                <a
+                  href="https://www.trustpilot.com/review/kizunaglobals.com"
+                  target="_blank"
+                  rel="noopener"
+                  >Trustpilot</a
+                >
+              </div>
+              <!-- End TrustBox widget -->
+            </div>
           </div>
         </div>
       </div>
