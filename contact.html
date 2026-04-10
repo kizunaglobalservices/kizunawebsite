@@ -514,7 +514,13 @@
       window.onload = () => {
         const params = new URLSearchParams(window.location.search);
         if (params.get("success") === "true") {
-          document.getElementById("contact-form").classList.add("hidden");
+          const form = document.getElementById("contact-form");
+          form.classList.add("hidden");
+          form
+            .querySelectorAll("input, select, textarea, button")
+            .forEach((el) => {
+              el.setAttribute("disabled", "disabled");
+            });
           document.getElementById("success-msg").classList.remove("hidden");
         }
 
