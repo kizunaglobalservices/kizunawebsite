@@ -107,20 +107,7 @@
         margin-top: 20px;
       }
     </style>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-H0NMGN146C"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "G-H0NMGN146C");
-    </script>
     <!-- TrustBox script -->
     <script
       type="text/javascript"
@@ -128,8 +115,32 @@
       async
     ></script>
     <!-- End TrustBox script -->
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-W9T5WBS6");
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body class="bg-navy text-white antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-W9T5WBS6"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Header / Navigation -->
     <header class="fixed w-full z-50 bg-navy text-white shadow-2xl">
       <div
@@ -1033,4 +1044,3 @@
     </script>
   </body>
 </html>
-
